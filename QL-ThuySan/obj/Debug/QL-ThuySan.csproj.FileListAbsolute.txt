@@ -1,0 +1,14 @@
+D:\Workspase\cs\QL-ThuySan\QL-ThuySan\bin\Debug\ql-thuysan.mdf
+D:\Workspase\cs\QL-ThuySan\QL-ThuySan\bin\Debug\ql-thuysan_log.ldf
+D:\Workspase\cs\QL-ThuySan\QL-ThuySan\bin\Debug\QL-ThuySan.exe.config
+D:\Workspase\cs\QL-ThuySan\QL-ThuySan\bin\Debug\QL-ThuySan.exe
+D:\Workspase\cs\QL-ThuySan\QL-ThuySan\bin\Debug\QL-ThuySan.pdb
+D:\Workspase\cs\QL-ThuySan\QL-ThuySan\obj\Debug\QL-ThuySan.csproj.AssemblyReference.cache
+D:\Workspase\cs\QL-ThuySan\QL-ThuySan\obj\Debug\QL_ThuySan.Properties.Resources.resources
+D:\Workspase\cs\QL-ThuySan\QL-ThuySan\obj\Debug\QL-ThuySan.csproj.GenerateResource.cache
+D:\Workspase\cs\QL-ThuySan\QL-ThuySan\obj\Debug\QL-ThuySan.csproj.CoreCompileInputs.cache
+D:\Workspase\cs\QL-ThuySan\QL-ThuySan\obj\Debug\QL-ThuySan.exe
+D:\Workspase\cs\QL-ThuySan\QL-ThuySan\obj\Debug\QL-ThuySan.pdb
+D:\Workspase\cs\QL-ThuySan\QL-ThuySan\obj\Debug\QL_ThuySan.FrRoot.resources
+D:\Workspase\cs\QL-ThuySan\QL-ThuySan\obj\Debug\QL_ThuySan.controls.HomeController.resources
+D:\Workspase\cs\QL-ThuySan\QL-ThuySan\obj\Debug\QL_ThuySan.controls.LoginController.resources

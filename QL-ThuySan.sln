@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34031.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QL-ThuySan", "QL-ThuySan\QL-ThuySan.csproj", "{F38A0124-537E-422E-A8AA-F9ED4E4165C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F38A0124-537E-422E-A8AA-F9ED4E4165C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F38A0124-537E-422E-A8AA-F9ED4E4165C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F38A0124-537E-422E-A8AA-F9ED4E4165C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F38A0124-537E-422E-A8AA-F9ED4E4165C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D63206B7-615D-41F9-A2B9-0BBA3E00D931}
+	EndGlobalSection
+EndGlobal
