@@ -81,6 +81,7 @@
     </Compile>
     <Compile Include="models\Account.cs" />
     <Compile Include="models\DepotDB.cs" />
+    <Compile Include="models\Model.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="controls\HomeController.resx">

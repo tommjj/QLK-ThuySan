@@ -8,13 +8,7 @@ using System.Threading.Tasks;
 
 namespace QL_ThuySan.models
 {
-
-
-    // private readonly SqlConnection conn = new("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\Nhat Dang Tai Lieu\\3.codes\\Cs\\buoi5\\buoi5\\Database1.mdf\";Integrated Security=True");
-    //private readonly DataTable dttSinhVien = new();
-    //private readonly SqlDataAdapter adtSinhVien = new();
-
-    class DepotDB
+    public class DepotDB
     {
         protected SqlConnection conn;
         protected SqlDataAdapter dataAdt;
@@ -47,13 +41,21 @@ namespace QL_ThuySan.models
             conn.Open();
         }
 
-        public DataTable QueryData(string sqlCommand)
+        public DataTable QueryTableData(string sqlCommand)
         {
             DataTable data = new DataTable();
             SqlCommand cm = new SqlCommand(sqlCommand, conn);
             dataAdt.SelectCommand = cm;
             dataAdt.Fill(data);
             return data;
+        }
+
+        public SqlDataReader QueryRederData(string sqlCommand)
+        {
+            SqlCommand cm = new SqlCommand(sqlCommand, conn);
+            SqlDataReader dr = cm.ExecuteReader();
+
+            return dr;
         }
 
         public void ExecuteNonQuery(string sqlCommand)

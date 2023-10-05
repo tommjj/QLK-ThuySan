@@ -19,6 +19,11 @@ namespace QL_ThuySan
 
         private DepotDB db;
 
+        public DepotDB getDB()
+        {
+            return db;
+        }
+
         public FrRoot()
         {
             loginController = new LoginController(this);
@@ -27,18 +32,18 @@ namespace QL_ThuySan
 
             db.connection();
 
-
             InitializeComponent();
 
-            root.Controls.Clear();
-       
-            //FormBorderStyle = FormBorderStyle.FixedSingle;
-            //MaximizeBox = false;
-            //MinimizeBox = false;
-
-            
+            root.Controls.Clear();          
 
             root.Controls.Add(loginController);
+        }
+
+        public void Logined()
+        {      
+            root.Controls.Clear();         
+
+            root.Controls.Add(mainLayout);
         }
 
         protected override void OnResize(System.EventArgs e)

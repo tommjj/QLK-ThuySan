@@ -7,37 +7,28 @@ using System.Threading.Tasks;
 
 namespace QL_ThuySan.models
 {
-    class Account
+    class Account : Model
     {
-        private DepotDB db;
-        private int id;
-        private string username;
-        private string password;
+     
 
-        public int Id
+        protected override void Delete()
         {
-            get { return id; }
+            throw new NotImplementedException();
         }
 
-        public string Username
+        protected override void Insert()
         {
-            get { return username; }
-            set { username = value; }
+            throw new NotImplementedException();
         }
 
-        public string Password
+        protected override void Save()
         {
-            set { password = value; }
+            throw new NotImplementedException();
         }
 
-        public Account(DepotDB db) 
+        protected override void Update()
         {
-            this.db = db;
-        }
-
-        public bool Verification ()
-        {
-            return true;
+            throw new NotImplementedException();
         }
     }
 }
