@@ -31,6 +31,9 @@ namespace QL_ThuySan.controls
             string password = Password.Text;
 
             SqlDataReader data = fRoot.getDB().QueryRederData("SELECT * FROM accounts WHERE username='"+ username + "'");
+         
+            //DataTable data2 = fRoot.getDB().QueryTableData("SELECT * FROM accounts");
+            //MessageBox.Show(data2.Rows[0].ItemArray[0].ToString());
 
             if (data.Read())
             {
@@ -44,11 +47,11 @@ namespace QL_ThuySan.controls
             data.Close();
         }
 
-        private void bLogin_KeyDown(object sender, KeyEventArgs e)
+        private void Password_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
-
+                login();
             }
         }
     }

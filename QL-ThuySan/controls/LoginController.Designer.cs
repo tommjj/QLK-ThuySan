@@ -111,7 +111,6 @@ namespace QL_ThuySan.controls
             this.bLogin.Text = "Đăng nhập";
             this.bLogin.UseVisualStyleBackColor = false;
             this.bLogin.Click += new System.EventHandler(this.bLogin_Click);
-            this.bLogin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.bLogin_KeyDown);
             // 
             // Password
             // 
@@ -121,6 +120,7 @@ namespace QL_ThuySan.controls
             this.Password.Size = new System.Drawing.Size(374, 43);
             this.Password.TabIndex = 1;
             this.Password.UseSystemPasswordChar = true;
+            this.Password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Password_KeyDown);
             // 
             // label3
             // 

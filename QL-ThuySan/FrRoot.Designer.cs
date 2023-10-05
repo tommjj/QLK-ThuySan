@@ -36,9 +36,9 @@ namespace QL_ThuySan
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bHome = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.bSanPham = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -120,68 +120,68 @@ namespace QL_ThuySan
             this.panel1.Location = new System.Drawing.Point(0, 80);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(311, 2);
+            this.panel1.Size = new System.Drawing.Size(310, 2);
             this.panel1.TabIndex = 2;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.bHome);
             this.panel2.Location = new System.Drawing.Point(7, 82);
             this.panel2.Margin = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(255, 58);
             this.panel2.TabIndex = 1;
             // 
-            // button1
+            // bHome
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(255, 58);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "         Trang chủ";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.bHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
+            this.bHome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bHome.FlatAppearance.BorderSize = 0;
+            this.bHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bHome.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bHome.ForeColor = System.Drawing.Color.White;
+            this.bHome.Image = ((System.Drawing.Image)(resources.GetObject("bHome.Image")));
+            this.bHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bHome.Location = new System.Drawing.Point(0, 0);
+            this.bHome.Margin = new System.Windows.Forms.Padding(0);
+            this.bHome.Name = "bHome";
+            this.bHome.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            this.bHome.Size = new System.Drawing.Size(255, 58);
+            this.bHome.TabIndex = 2;
+            this.bHome.Text = "         Trang chủ";
+            this.bHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bHome.UseVisualStyleBackColor = false;
+            this.bHome.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.bSanPham);
             this.panel3.Location = new System.Drawing.Point(7, 140);
             this.panel3.Margin = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(255, 58);
             this.panel3.TabIndex = 1;
             // 
-            // button2
+            // bSanPham
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(255, 58);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "         Sản phẩm";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button1_Click);
+            this.bSanPham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
+            this.bSanPham.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bSanPham.FlatAppearance.BorderSize = 0;
+            this.bSanPham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bSanPham.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bSanPham.ForeColor = System.Drawing.Color.White;
+            this.bSanPham.Image = ((System.Drawing.Image)(resources.GetObject("bSanPham.Image")));
+            this.bSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bSanPham.Location = new System.Drawing.Point(0, 0);
+            this.bSanPham.Margin = new System.Windows.Forms.Padding(0);
+            this.bSanPham.Name = "bSanPham";
+            this.bSanPham.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            this.bSanPham.Size = new System.Drawing.Size(255, 58);
+            this.bSanPham.TabIndex = 2;
+            this.bSanPham.Text = "         Sản phẩm";
+            this.bSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bSanPham.UseVisualStyleBackColor = false;
+            this.bSanPham.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel5
             // 
@@ -371,9 +371,9 @@ namespace QL_ThuySan
 
         private System.Windows.Forms.Panel pNav;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bHome;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button bSanPham;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;

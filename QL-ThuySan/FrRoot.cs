@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static QL_ThuySan.utils.Constants;
 
 namespace QL_ThuySan
 {
@@ -56,7 +57,27 @@ namespace QL_ThuySan
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Button bt = (Button)sender;
+            string name = bt.Text;
+            name = name.Trim();
 
+            switch(name) {
+                case Pages.HOME_PAGE:
+                    break;
+                case Pages.GOODS_PAGE:
+                    break;
+                case Pages.EXPORT_PAGE:
+                    break;
+                case Pages.IMPORT_PAGE:
+                    break;
+                case Pages.CUSTOMER_PAGE:
+                    break;
+                case Pages.SUPPLIER_PAGE:
+                    break;
+                default:
+                    
+                    break;
+            }
         }
     }
 }
