@@ -12,9 +12,16 @@ namespace QL_ThuySan.controls
 {
     public partial class ExportController : UserControl
     {
-        public ExportController()
+        private FrRoot root;
+        public ExportController(FrRoot root)
         {
+            this.root = root;
+            init();
             InitializeComponent();
+        }
+        private void init()
+        {
+
         }
     }
 }

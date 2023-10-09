@@ -38,15 +38,15 @@ namespace QL_ThuySan
             this.panel2 = new System.Windows.Forms.Panel();
             this.bHome = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.bSanPham = new System.Windows.Forms.Button();
+            this.bGoods = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.bExport = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.bImport = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.bCustomer = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
+            this.bSupplier = new System.Windows.Forms.Button();
             this.mainLayout = new System.Windows.Forms.TableLayoutPanel();
             this.Main = new System.Windows.Forms.Panel();
             this.root = new System.Windows.Forms.Panel();
@@ -138,7 +138,7 @@ namespace QL_ThuySan
             this.bHome.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bHome.FlatAppearance.BorderSize = 0;
             this.bHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bHome.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bHome.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bHome.ForeColor = System.Drawing.Color.White;
             this.bHome.Image = ((System.Drawing.Image)(resources.GetObject("bHome.Image")));
             this.bHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -151,172 +151,171 @@ namespace QL_ThuySan
             this.bHome.Text = "         Trang chủ";
             this.bHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bHome.UseVisualStyleBackColor = false;
-            this.bHome.Click += new System.EventHandler(this.button1_Click);
+            this.bHome.Click += new System.EventHandler(this.Button1_Click);
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.bSanPham);
+            this.panel3.Controls.Add(this.bGoods);
             this.panel3.Location = new System.Drawing.Point(7, 140);
             this.panel3.Margin = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(255, 58);
             this.panel3.TabIndex = 1;
             // 
-            // bSanPham
+            // bGoods
             // 
-            this.bSanPham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
-            this.bSanPham.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bSanPham.FlatAppearance.BorderSize = 0;
-            this.bSanPham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bSanPham.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bSanPham.ForeColor = System.Drawing.Color.White;
-            this.bSanPham.Image = ((System.Drawing.Image)(resources.GetObject("bSanPham.Image")));
-            this.bSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bSanPham.Location = new System.Drawing.Point(0, 0);
-            this.bSanPham.Margin = new System.Windows.Forms.Padding(0);
-            this.bSanPham.Name = "bSanPham";
-            this.bSanPham.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.bSanPham.Size = new System.Drawing.Size(255, 58);
-            this.bSanPham.TabIndex = 2;
-            this.bSanPham.Text = "         Sản phẩm";
-            this.bSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bSanPham.UseVisualStyleBackColor = false;
-            this.bSanPham.Click += new System.EventHandler(this.button1_Click);
+            this.bGoods.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
+            this.bGoods.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bGoods.FlatAppearance.BorderSize = 0;
+            this.bGoods.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bGoods.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bGoods.ForeColor = System.Drawing.Color.White;
+            this.bGoods.Image = ((System.Drawing.Image)(resources.GetObject("bGoods.Image")));
+            this.bGoods.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bGoods.Location = new System.Drawing.Point(0, 0);
+            this.bGoods.Margin = new System.Windows.Forms.Padding(0);
+            this.bGoods.Name = "bGoods";
+            this.bGoods.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            this.bGoods.Size = new System.Drawing.Size(255, 58);
+            this.bGoods.TabIndex = 2;
+            this.bGoods.Text = "         Sản phẩm";
+            this.bGoods.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bGoods.UseVisualStyleBackColor = false;
+            this.bGoods.Click += new System.EventHandler(this.Button1_Click);
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.button4);
+            this.panel5.Controls.Add(this.bExport);
             this.panel5.Location = new System.Drawing.Point(7, 198);
             this.panel5.Margin = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(255, 58);
             this.panel5.TabIndex = 1;
             // 
-            // button4
+            // bExport
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 0);
-            this.button4.Margin = new System.Windows.Forms.Padding(0);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(255, 58);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "         Xuất hàng";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button1_Click);
+            this.bExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
+            this.bExport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bExport.FlatAppearance.BorderSize = 0;
+            this.bExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bExport.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bExport.ForeColor = System.Drawing.Color.White;
+            this.bExport.Image = ((System.Drawing.Image)(resources.GetObject("bExport.Image")));
+            this.bExport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bExport.Location = new System.Drawing.Point(0, 0);
+            this.bExport.Margin = new System.Windows.Forms.Padding(0);
+            this.bExport.Name = "bExport";
+            this.bExport.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            this.bExport.Size = new System.Drawing.Size(255, 58);
+            this.bExport.TabIndex = 2;
+            this.bExport.Text = "         Xuất hàng";
+            this.bExport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bExport.UseVisualStyleBackColor = false;
+            this.bExport.Click += new System.EventHandler(this.Button1_Click);
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.button3);
+            this.panel4.Controls.Add(this.bImport);
             this.panel4.Location = new System.Drawing.Point(7, 256);
             this.panel4.Margin = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(255, 58);
             this.panel4.TabIndex = 1;
             // 
-            // button3
+            // bImport
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Margin = new System.Windows.Forms.Padding(0);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(255, 58);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "         Nhập hàng";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button1_Click);
+            this.bImport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
+            this.bImport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bImport.FlatAppearance.BorderSize = 0;
+            this.bImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bImport.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bImport.ForeColor = System.Drawing.Color.White;
+            this.bImport.Image = ((System.Drawing.Image)(resources.GetObject("bImport.Image")));
+            this.bImport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bImport.Location = new System.Drawing.Point(0, 0);
+            this.bImport.Margin = new System.Windows.Forms.Padding(0);
+            this.bImport.Name = "bImport";
+            this.bImport.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            this.bImport.Size = new System.Drawing.Size(255, 58);
+            this.bImport.TabIndex = 2;
+            this.bImport.Text = "         Nhập hàng";
+            this.bImport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bImport.UseVisualStyleBackColor = false;
+            this.bImport.Click += new System.EventHandler(this.Button1_Click);
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.button5);
+            this.panel6.Controls.Add(this.bCustomer);
             this.panel6.Location = new System.Drawing.Point(7, 314);
             this.panel6.Margin = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(255, 58);
             this.panel6.TabIndex = 1;
             // 
-            // button5
+            // bCustomer
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
-            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 0);
-            this.button5.Margin = new System.Windows.Forms.Padding(0);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(255, 58);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "         Khách hàng";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button1_Click);
+            this.bCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
+            this.bCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bCustomer.FlatAppearance.BorderSize = 0;
+            this.bCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bCustomer.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bCustomer.ForeColor = System.Drawing.Color.White;
+            this.bCustomer.Image = ((System.Drawing.Image)(resources.GetObject("bCustomer.Image")));
+            this.bCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bCustomer.Location = new System.Drawing.Point(0, 0);
+            this.bCustomer.Margin = new System.Windows.Forms.Padding(0);
+            this.bCustomer.Name = "bCustomer";
+            this.bCustomer.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            this.bCustomer.Size = new System.Drawing.Size(255, 58);
+            this.bCustomer.TabIndex = 2;
+            this.bCustomer.Text = "         Khách hàng";
+            this.bCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bCustomer.UseVisualStyleBackColor = false;
+            this.bCustomer.Click += new System.EventHandler(this.Button1_Click);
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.button6);
+            this.panel7.Controls.Add(this.bSupplier);
             this.panel7.Location = new System.Drawing.Point(7, 372);
             this.panel7.Margin = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(255, 58);
             this.panel7.TabIndex = 1;
             // 
-            // button6
+            // bSupplier
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
-            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(0, 0);
-            this.button6.Margin = new System.Windows.Forms.Padding(0);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(255, 58);
-            this.button6.TabIndex = 2;
-            this.button6.Text = "         Nhà cung cấp";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button1_Click);
+            this.bSupplier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
+            this.bSupplier.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bSupplier.FlatAppearance.BorderSize = 0;
+            this.bSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bSupplier.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bSupplier.ForeColor = System.Drawing.Color.White;
+            this.bSupplier.Image = ((System.Drawing.Image)(resources.GetObject("bSupplier.Image")));
+            this.bSupplier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bSupplier.Location = new System.Drawing.Point(0, 0);
+            this.bSupplier.Margin = new System.Windows.Forms.Padding(0);
+            this.bSupplier.Name = "bSupplier";
+            this.bSupplier.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            this.bSupplier.Size = new System.Drawing.Size(255, 58);
+            this.bSupplier.TabIndex = 2;
+            this.bSupplier.Text = "         Nhà cung cấp";
+            this.bSupplier.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bSupplier.UseVisualStyleBackColor = false;
+            this.bSupplier.Click += new System.EventHandler(this.Button1_Click);
             // 
             // mainLayout
             // 
             this.mainLayout.BackColor = System.Drawing.Color.White;
             this.mainLayout.ColumnCount = 2;
-            this.mainLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.04714F));
-            this.mainLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.95287F));
+            this.mainLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18F));
+            this.mainLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 82F));
             this.mainLayout.Controls.Add(this.pNav, 0, 0);
             this.mainLayout.Controls.Add(this.Main, 1, 0);
             this.mainLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainLayout.Location = new System.Drawing.Point(0, 0);
             this.mainLayout.Name = "mainLayout";
             this.mainLayout.RowCount = 1;
-            this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.mainLayout.Size = new System.Drawing.Size(1485, 798);
             this.mainLayout.TabIndex = 1;
             // 
@@ -348,6 +347,7 @@ namespace QL_ThuySan
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1485, 798);
             this.Controls.Add(this.root);
+            this.MinimumSize = new System.Drawing.Size(1503, 845);
             this.Name = "FrRoot";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -373,18 +373,18 @@ namespace QL_ThuySan
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button bHome;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button bSanPham;
+        private System.Windows.Forms.Button bGoods;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button bImport;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button bExport;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button bCustomer;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button bSupplier;
         private System.Windows.Forms.TableLayoutPanel mainLayout;
         private System.Windows.Forms.Panel Main;
         private System.Windows.Forms.Panel root;

@@ -12,6 +12,7 @@ namespace QL_ThuySan.models
     {
         protected SqlConnection conn;
         protected SqlDataAdapter dataAdt;
+        protected string connectionString;
 
         public SqlConnection Conn
         {
@@ -28,16 +29,23 @@ namespace QL_ThuySan.models
         {
             conn = new SqlConnection(connString);
             dataAdt = new SqlDataAdapter();
+            this.connectionString = connString;
         }
 
-        public void connection()
+        public void Connection()
         {
             conn.Open();
         }
 
-        public void connection(string connString)
+        public void Close()
+        {
+            conn.Close();
+        }
+
+        public void Connection(string connString)
         {
             conn = new SqlConnection(connString);
+            this.connectionString = connString;
             conn.Open();
         }
 
@@ -62,6 +70,11 @@ namespace QL_ThuySan.models
         {
             SqlCommand cm = new SqlCommand(sqlCommand, conn);
             cm.ExecuteNonQuery();
+        }
+
+        public DepotDB getNewDB()
+        {
+            return new DepotDB(connectionString);
         }
     }
 }

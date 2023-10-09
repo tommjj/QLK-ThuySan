@@ -8,6 +8,10 @@ namespace QL_ThuySan.utils
 {
     public static class Constants
     {
+        public static class Config
+        {
+            public const string CONNECTION_STRING = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\ql-thuysan.mdf;Integrated Security=True";
+        }
         public static class Pages{
             public const string HOME_PAGE = "Trang chủ";
             public const string PRODUTE_PAGE = "Sản phẩm";

@@ -12,9 +12,12 @@ namespace QL_ThuySan.controls
 {
     public partial class HomeController : UserControl
     {
-        public HomeController()
+        FrRoot root;
+        public HomeController(FrRoot root)
         {
+            this.root = root;
             InitializeComponent();
+            
         }
     }
 }

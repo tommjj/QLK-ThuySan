@@ -48,8 +48,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,11 +70,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="controls\DoodsController.cs">
+    <Compile Include="controls\CustomerController.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="controls\DoodsController.Designer.cs">
-      <DependentUpon>DoodsController.cs</DependentUpon>
+    <Compile Include="controls\CustomerController.Designer.cs">
+      <DependentUpon>CustomerController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\GoodsController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\GoodsController.Designer.cs">
+      <DependentUpon>GoodsController.cs</DependentUpon>
     </Compile>
     <Compile Include="controls\ExportController.cs">
       <SubType>UserControl</SubType>
@@ -91,23 +106,43 @@
     <Compile Include="controls\LoginController.Designer.cs">
       <DependentUpon>LoginController.cs</DependentUpon>
     </Compile>
+    <Compile Include="controls\SupplierContrller.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\SupplierContrller.Designer.cs">
+      <DependentUpon>SupplierContrller.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrRoot.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrRoot.Designer.cs">
       <DependentUpon>FrRoot.cs</DependentUpon>
     </Compile>
-    <Compile Include="models\Account.cs" />
     <Compile Include="models\DepotDB.cs" />
-    <Compile Include="models\Model.cs" />
+    <Compile Include="models\Models.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utils\Constants.cs" />
+    <EmbeddedResource Include="controls\CustomerController.resx">
+      <DependentUpon>CustomerController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\GoodsController.resx">
+      <DependentUpon>GoodsController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\ExportController.resx">
+      <DependentUpon>ExportController.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="controls\HomeController.resx">
       <DependentUpon>HomeController.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="controls\ImportController.resx">
+      <DependentUpon>ImportController.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="controls\LoginController.resx">
       <DependentUpon>LoginController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\SupplierContrller.resx">
+      <DependentUpon>SupplierContrller.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrRoot.resx">
       <DependentUpon>FrRoot.cs</DependentUpon>
@@ -164,6 +199,8 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="components\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -12,8 +12,10 @@ namespace QL_ThuySan.controls
 {
     public partial class ImportController : UserControl
     {
-        public ImportController()
+        private FrRoot root;
+        public ImportController(FrRoot root)
         {
+            this.root = root;
             InitializeComponent();
         }
     }
