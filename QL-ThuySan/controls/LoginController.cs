@@ -28,24 +28,32 @@ namespace QL_ThuySan.controls
 
         private void Login()
         {
-            
             string username = tUsername.Text;
             string password = Password.Text;
 
-            SqlDataReader data = fRoot.getDB().QueryRederData("SELECT * FROM accounts WHERE username='"+ username + "'");
-            
-            //DataTable data2 = fRoot.getDB().QueryTableData("SELECT * FROM accounts");
-            //MessageBox.Show(data2.Rows[0].ItemArray[1].ToString());
+            /*
+            using (var context = new Models())
+            {
+                var acc = new account
+                {
+                    username = username,
+                    password = password
+                };
 
-            if (data.Read())
-            {   
-                if (data["password"].ToString().Trim() == password)
+                context.accounts.Add(acc);
+                context.SaveChanges();
+
+            }*/
+
+            var query = fRoot.getContext().accounts.SingleOrDefault(s => s.username == username);
+
+            if(query != null)
+            {
+                if(password == query.password.TrimEnd(' '))
                 {
                     fRoot.Logined();
                 }
-            }
-
-            data.Close();
+            }            
         }
             
         private void Password_KeyDown(object sender, KeyEventArgs e)

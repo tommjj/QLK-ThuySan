@@ -118,8 +118,18 @@
     <Compile Include="FrRoot.Designer.cs">
       <DependentUpon>FrRoot.cs</DependentUpon>
     </Compile>
+    <Compile Include="models\account.cs" />
     <Compile Include="models\DepotDB.cs" />
+    <Compile Include="models\KhachHang.cs" />
+    <Compile Include="models\Kho.cs" />
     <Compile Include="models\Models.cs" />
+    <Compile Include="models\NhaCungCap.cs" />
+    <Compile Include="models\PhieuNhap.cs" />
+    <Compile Include="models\PhieuXuat.cs" />
+    <Compile Include="models\ThuySan.cs" />
+    <Compile Include="models\TonKho.cs" />
+    <Compile Include="models\TTPhieuNhap.cs" />
+    <Compile Include="models\TTPhieuXuat.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utils\Constants.cs" />
@@ -156,6 +166,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

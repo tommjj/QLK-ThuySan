@@ -24,6 +24,7 @@ namespace QL_ThuySan
         private SupplierContrller supplierContrller;
 
         private DepotDB db;
+        private Models context;
 
         public DepotDB getDB()
         {
@@ -49,9 +50,16 @@ namespace QL_ThuySan
             goodsController = new GoodsController(this);
             supplierContrller = new SupplierContrller(this);
 
+            context = new Models();
+
             db = new DepotDB(Config.CONNECTION_STRING);
 
             db.Connection();
+        }
+
+        public Models getContext()
+        {
+            return context;
         }
 
         public void Setup()
@@ -59,7 +67,7 @@ namespace QL_ThuySan
             SetLock();
             //
             ResizeControl();
-
+           
         }
 
         public void SetLock()

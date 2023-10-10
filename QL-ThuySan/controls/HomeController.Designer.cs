@@ -31,9 +31,9 @@ namespace QL_ThuySan.controls
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.PList = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -59,24 +59,13 @@ namespace QL_ThuySan.controls
             this.tableLayoutPanel1.Controls.Add(this.PList, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 183);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 135);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1242, 615);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1242, 663);
             this.tableLayoutPanel1.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1242, 183);
-            this.panel2.TabIndex = 0;
             // 
             // PList
             // 
@@ -85,7 +74,7 @@ namespace QL_ThuySan.controls
             this.PList.Location = new System.Drawing.Point(0, 0);
             this.PList.Margin = new System.Windows.Forms.Padding(0);
             this.PList.Name = "PList";
-            this.PList.Size = new System.Drawing.Size(869, 615);
+            this.PList.Size = new System.Drawing.Size(869, 663);
             this.PList.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -95,8 +84,19 @@ namespace QL_ThuySan.controls
             this.flowLayoutPanel1.Location = new System.Drawing.Point(869, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(373, 615);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(373, 663);
             this.flowLayoutPanel1.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1242, 135);
+            this.panel2.TabIndex = 0;
             // 
             // label1
             // 
@@ -104,7 +104,7 @@ namespace QL_ThuySan.controls
             this.label1.Font = new System.Drawing.Font("Segoe UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(4, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(391, 60);
+            this.label1.Size = new System.Drawing.Size(382, 59);
             this.label1.TabIndex = 0;
             this.label1.Text = "Quản lý kho hàng";
             // 
