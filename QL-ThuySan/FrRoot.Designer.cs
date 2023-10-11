@@ -31,6 +31,10 @@ namespace QL_ThuySan
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrRoot));
             this.pNav = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.BLogout = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,6 +55,9 @@ namespace QL_ThuySan
             this.Main = new System.Windows.Forms.Panel();
             this.root = new System.Windows.Forms.Panel();
             this.pNav.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -66,7 +73,7 @@ namespace QL_ThuySan
             // pNav
             // 
             this.pNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
-            this.pNav.Controls.Add(this.flowLayoutPanel1);
+            this.pNav.Controls.Add(this.panel10);
             this.pNav.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pNav.Location = new System.Drawing.Point(0, 0);
             this.pNav.Margin = new System.Windows.Forms.Padding(0);
@@ -75,6 +82,56 @@ namespace QL_ThuySan
             this.pNav.Name = "pNav";
             this.pNav.Size = new System.Drawing.Size(270, 798);
             this.pNav.TabIndex = 0;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.panel11);
+            this.panel10.Controls.Add(this.flowLayoutPanel1);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel10.Location = new System.Drawing.Point(-17, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(287, 798);
+            this.panel10.TabIndex = 2;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.panel9);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel11.Location = new System.Drawing.Point(0, 734);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(287, 64);
+            this.panel11.TabIndex = 1;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.BLogout);
+            this.panel9.Location = new System.Drawing.Point(7, 4);
+            this.panel9.Margin = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(265, 58);
+            this.panel9.TabIndex = 1;
+            // 
+            // BLogout
+            // 
+            this.BLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
+            this.BLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BLogout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BLogout.FlatAppearance.BorderSize = 0;
+            this.BLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BLogout.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BLogout.ForeColor = System.Drawing.Color.White;
+            this.BLogout.Image = ((System.Drawing.Image)(resources.GetObject("BLogout.Image")));
+            this.BLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BLogout.Location = new System.Drawing.Point(0, 0);
+            this.BLogout.Margin = new System.Windows.Forms.Padding(0);
+            this.BLogout.Name = "BLogout";
+            this.BLogout.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.BLogout.Size = new System.Drawing.Size(265, 58);
+            this.BLogout.TabIndex = 2;
+            this.BLogout.Text = "         Đăng xuất";
+            this.BLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BLogout.UseVisualStyleBackColor = false;
+            this.BLogout.Click += new System.EventHandler(this.LogoutClick);
             // 
             // flowLayoutPanel1
             // 
@@ -86,11 +143,11 @@ namespace QL_ThuySan
             this.flowLayoutPanel1.Controls.Add(this.panel4);
             this.flowLayoutPanel1.Controls.Add(this.panel6);
             this.flowLayoutPanel1.Controls.Add(this.panel7);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(270, 798);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(287, 798);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // panel8
@@ -107,7 +164,7 @@ namespace QL_ThuySan
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 12);
+            this.label1.Location = new System.Drawing.Point(21, 12);
             this.label1.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(130, 54);
@@ -129,12 +186,13 @@ namespace QL_ThuySan
             this.panel2.Location = new System.Drawing.Point(7, 82);
             this.panel2.Margin = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(255, 58);
+            this.panel2.Size = new System.Drawing.Size(265, 58);
             this.panel2.TabIndex = 1;
             // 
             // bHome
             // 
             this.bHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
+            this.bHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bHome.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bHome.FlatAppearance.BorderSize = 0;
             this.bHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -145,8 +203,8 @@ namespace QL_ThuySan
             this.bHome.Location = new System.Drawing.Point(0, 0);
             this.bHome.Margin = new System.Windows.Forms.Padding(0);
             this.bHome.Name = "bHome";
-            this.bHome.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.bHome.Size = new System.Drawing.Size(255, 58);
+            this.bHome.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.bHome.Size = new System.Drawing.Size(265, 58);
             this.bHome.TabIndex = 2;
             this.bHome.Text = "         Trang chủ";
             this.bHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -159,12 +217,13 @@ namespace QL_ThuySan
             this.panel3.Location = new System.Drawing.Point(7, 140);
             this.panel3.Margin = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(255, 58);
+            this.panel3.Size = new System.Drawing.Size(265, 58);
             this.panel3.TabIndex = 1;
             // 
             // bGoods
             // 
             this.bGoods.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
+            this.bGoods.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bGoods.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bGoods.FlatAppearance.BorderSize = 0;
             this.bGoods.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -175,8 +234,8 @@ namespace QL_ThuySan
             this.bGoods.Location = new System.Drawing.Point(0, 0);
             this.bGoods.Margin = new System.Windows.Forms.Padding(0);
             this.bGoods.Name = "bGoods";
-            this.bGoods.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.bGoods.Size = new System.Drawing.Size(255, 58);
+            this.bGoods.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.bGoods.Size = new System.Drawing.Size(265, 58);
             this.bGoods.TabIndex = 2;
             this.bGoods.Text = "         Sản phẩm";
             this.bGoods.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -189,12 +248,13 @@ namespace QL_ThuySan
             this.panel5.Location = new System.Drawing.Point(7, 198);
             this.panel5.Margin = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(255, 58);
+            this.panel5.Size = new System.Drawing.Size(265, 58);
             this.panel5.TabIndex = 1;
             // 
             // bExport
             // 
             this.bExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
+            this.bExport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bExport.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bExport.FlatAppearance.BorderSize = 0;
             this.bExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -205,8 +265,8 @@ namespace QL_ThuySan
             this.bExport.Location = new System.Drawing.Point(0, 0);
             this.bExport.Margin = new System.Windows.Forms.Padding(0);
             this.bExport.Name = "bExport";
-            this.bExport.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.bExport.Size = new System.Drawing.Size(255, 58);
+            this.bExport.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.bExport.Size = new System.Drawing.Size(265, 58);
             this.bExport.TabIndex = 2;
             this.bExport.Text = "         Xuất hàng";
             this.bExport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -219,12 +279,13 @@ namespace QL_ThuySan
             this.panel4.Location = new System.Drawing.Point(7, 256);
             this.panel4.Margin = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(255, 58);
+            this.panel4.Size = new System.Drawing.Size(265, 58);
             this.panel4.TabIndex = 1;
             // 
             // bImport
             // 
             this.bImport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
+            this.bImport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bImport.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bImport.FlatAppearance.BorderSize = 0;
             this.bImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -235,8 +296,8 @@ namespace QL_ThuySan
             this.bImport.Location = new System.Drawing.Point(0, 0);
             this.bImport.Margin = new System.Windows.Forms.Padding(0);
             this.bImport.Name = "bImport";
-            this.bImport.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.bImport.Size = new System.Drawing.Size(255, 58);
+            this.bImport.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.bImport.Size = new System.Drawing.Size(265, 58);
             this.bImport.TabIndex = 2;
             this.bImport.Text = "         Nhập hàng";
             this.bImport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -249,12 +310,13 @@ namespace QL_ThuySan
             this.panel6.Location = new System.Drawing.Point(7, 314);
             this.panel6.Margin = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(255, 58);
+            this.panel6.Size = new System.Drawing.Size(265, 58);
             this.panel6.TabIndex = 1;
             // 
             // bCustomer
             // 
             this.bCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
+            this.bCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bCustomer.FlatAppearance.BorderSize = 0;
             this.bCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -265,8 +327,8 @@ namespace QL_ThuySan
             this.bCustomer.Location = new System.Drawing.Point(0, 0);
             this.bCustomer.Margin = new System.Windows.Forms.Padding(0);
             this.bCustomer.Name = "bCustomer";
-            this.bCustomer.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.bCustomer.Size = new System.Drawing.Size(255, 58);
+            this.bCustomer.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.bCustomer.Size = new System.Drawing.Size(265, 58);
             this.bCustomer.TabIndex = 2;
             this.bCustomer.Text = "         Khách hàng";
             this.bCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -279,12 +341,13 @@ namespace QL_ThuySan
             this.panel7.Location = new System.Drawing.Point(7, 372);
             this.panel7.Margin = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(255, 58);
+            this.panel7.Size = new System.Drawing.Size(265, 58);
             this.panel7.TabIndex = 1;
             // 
             // bSupplier
             // 
             this.bSupplier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
+            this.bSupplier.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bSupplier.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bSupplier.FlatAppearance.BorderSize = 0;
             this.bSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -295,8 +358,8 @@ namespace QL_ThuySan
             this.bSupplier.Location = new System.Drawing.Point(0, 0);
             this.bSupplier.Margin = new System.Windows.Forms.Padding(0);
             this.bSupplier.Name = "bSupplier";
-            this.bSupplier.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.bSupplier.Size = new System.Drawing.Size(255, 58);
+            this.bSupplier.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.bSupplier.Size = new System.Drawing.Size(265, 58);
             this.bSupplier.TabIndex = 2;
             this.bSupplier.Text = "         Nhà cung cấp";
             this.bSupplier.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -352,6 +415,9 @@ namespace QL_ThuySan
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.pNav.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
@@ -389,6 +455,10 @@ namespace QL_ThuySan
         private System.Windows.Forms.Panel Main;
         private System.Windows.Forms.Panel root;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Button BLogout;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel11;
     }
 }
 

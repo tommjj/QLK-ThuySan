@@ -40,6 +40,7 @@ namespace QL_ThuySan.controls
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.Lerr = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -83,6 +84,7 @@ namespace QL_ThuySan.controls
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.Lerr);
             this.panel1.Controls.Add(this.bLogin);
             this.panel1.Controls.Add(this.Password);
             this.panel1.Controls.Add(this.label3);
@@ -181,6 +183,16 @@ namespace QL_ThuySan.controls
             this.panel3.Size = new System.Drawing.Size(10, 798);
             this.panel3.TabIndex = 0;
             // 
+            // Lerr
+            // 
+            this.Lerr.AutoSize = true;
+            this.Lerr.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lerr.ForeColor = System.Drawing.Color.Red;
+            this.Lerr.Location = new System.Drawing.Point(17, 69);
+            this.Lerr.Name = "Lerr";
+            this.Lerr.Size = new System.Drawing.Size(0, 19);
+            this.Lerr.TabIndex = 3;
+            // 
             // LoginController
             // 
             this.AllowDrop = true;
@@ -213,5 +225,6 @@ namespace QL_ThuySan.controls
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label Lerr;
     }
 }

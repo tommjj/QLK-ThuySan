@@ -42,7 +42,6 @@ namespace QL_ThuySan.controls
 
                 context.accounts.Add(acc);
                 context.SaveChanges();
-
             }*/
 
             var query = fRoot.getContext().accounts.SingleOrDefault(s => s.username == username);
@@ -51,9 +50,13 @@ namespace QL_ThuySan.controls
             {
                 if(password == query.password.TrimEnd(' '))
                 {
-                    fRoot.Logined();
+                    fRoot.Logined(query.Id);
+                    Password.Text = "";
+                    return;
                 }
-            }            
+            } 
+            
+            Lerr.Text = "Tài khoảng hoặc mật khẩu sai!";     
         }
             
         private void Password_KeyDown(object sender, KeyEventArgs e)

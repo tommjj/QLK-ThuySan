@@ -70,6 +70,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="components\EditDelop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\EditDelop.Designer.cs">
+      <DependentUpon>EditDelop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="components\LIThuySan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\LIThuySan.Designer.cs">
+      <DependentUpon>LIThuySan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="components\LITonKho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\LITonKho.Designer.cs">
+      <DependentUpon>LITonKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="controls\CustomerController.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -112,6 +130,18 @@
     <Compile Include="controls\SupplierContrller.Designer.cs">
       <DependentUpon>SupplierContrller.cs</DependentUpon>
     </Compile>
+    <Compile Include="form\AddDepot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\AddDepot.Designer.cs">
+      <DependentUpon>AddDepot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\ConfirmPW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\ConfirmPW.Designer.cs">
+      <DependentUpon>ConfirmPW.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrRoot.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +163,15 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utils\Constants.cs" />
+    <EmbeddedResource Include="components\EditDelop.resx">
+      <DependentUpon>EditDelop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\LIThuySan.resx">
+      <DependentUpon>LIThuySan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\LITonKho.resx">
+      <DependentUpon>LITonKho.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="controls\CustomerController.resx">
       <DependentUpon>CustomerController.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +192,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="controls\SupplierContrller.resx">
       <DependentUpon>SupplierContrller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\AddDepot.resx">
+      <DependentUpon>AddDepot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\ConfirmPW.resx">
+      <DependentUpon>ConfirmPW.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrRoot.resx">
       <DependentUpon>FrRoot.cs</DependentUpon>
@@ -194,7 +239,9 @@
     <Content Include="res\icon\export.png" />
     <Content Include="res\icon\group-solid-24.png" />
     <Content Include="res\icon\import.png" />
+    <Content Include="res\icon\log-out-circle-regular-24.png" />
     <Content Include="res\icon\package-solid.png" />
+    <Content Include="res\icon\search-regular-24.png" />
     <Content Include="res\icon\store-alt-regular.png" />
     <Content Include="res\icon\truck-solid-24.png" />
   </ItemGroup>
@@ -210,8 +257,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="components\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -26,6 +26,8 @@ namespace QL_ThuySan
         private DepotDB db;
         private Models context;
 
+        private int userId;
+
         public DepotDB getDB()
         {
             return db;
@@ -42,6 +44,12 @@ namespace QL_ThuySan
 
         public void Init()
         {
+            context = new Models();
+
+            db = new DepotDB(Config.CONNECTION_STRING);
+
+            db.Connection();
+
             loginController = new LoginController(this);
             homeController = new HomeController(this);
             customerController = new CustomerController(this);
@@ -50,11 +58,12 @@ namespace QL_ThuySan
             goodsController = new GoodsController(this);
             supplierContrller = new SupplierContrller(this);
 
-            context = new Models();
+            userId = 2;
+        }
 
-            db = new DepotDB(Config.CONNECTION_STRING);
-
-            db.Connection();
+        public HomeController GetHomeController()
+        {
+            return homeController;
         }
 
         public Models getContext()
@@ -62,10 +71,18 @@ namespace QL_ThuySan
             return context;
         }
 
+        public int getUserId()
+        {
+            return userId;
+        }
+
         public void Setup()
         {
-            SetLock();
+            //SetLock();
             //
+            SetNavButtonColorActive(bHome);
+            SetMainControl(homeController);
+
             ResizeControl();
            
         }
@@ -76,8 +93,9 @@ namespace QL_ThuySan
             root.Controls.Add(loginController);
         }
 
-        public void Logined()
-        {      
+        public void Logined(int uId)
+        {
+            this.userId = uId;
             root.Controls.Clear();         
 
             root.Controls.Add(mainLayout);
@@ -175,6 +193,12 @@ namespace QL_ThuySan
                 default:
                     break;
             }
+        }
+
+        private void LogoutClick(object sender, EventArgs e)
+        {
+            SetLock();
+            ResizeControl();
         }
     }
 }
