@@ -33,10 +33,10 @@ namespace QL_ThuySan.components
             this.panel2 = new System.Windows.Forms.Panel();
             this.lGia = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lId = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lNameTS = new System.Windows.Forms.Label();
-            this.lId = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -95,6 +95,17 @@ namespace QL_ThuySan.components
             this.panel1.TabIndex = 0;
             this.panel1.Click += new System.EventHandler(this.ClickEv);
             // 
+            // lId
+            // 
+            this.lId.AutoSize = true;
+            this.lId.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lId.Location = new System.Drawing.Point(11, 35);
+            this.lId.Name = "lId";
+            this.lId.Size = new System.Drawing.Size(0, 23);
+            this.lId.TabIndex = 5;
+            this.lId.Click += new System.EventHandler(this.ClickEv);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -128,16 +139,6 @@ namespace QL_ThuySan.components
             this.lNameTS.TabIndex = 0;
             this.lNameTS.Text = "name";
             this.lNameTS.Click += new System.EventHandler(this.ClickEv);
-            // 
-            // lId
-            // 
-            this.lId.AutoSize = true;
-            this.lId.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lId.Location = new System.Drawing.Point(11, 35);
-            this.lId.Name = "lId";
-            this.lId.Size = new System.Drawing.Size(0, 23);
-            this.lId.TabIndex = 5;
             // 
             // LIThuySan
             // 

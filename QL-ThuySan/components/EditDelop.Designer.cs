@@ -30,10 +30,10 @@ namespace QL_ThuySan.components
         private void InitializeComponent()
         {
             this.pMain = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tName = new System.Windows.Forms.TextBox();
-            this.bSave = new System.Windows.Forms.Button();
             this.bDeleteDelop = new System.Windows.Forms.Button();
+            this.bSave = new System.Windows.Forms.Button();
+            this.tName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.pMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,6 +50,46 @@ namespace QL_ThuySan.components
             this.pMain.Size = new System.Drawing.Size(340, 211);
             this.pMain.TabIndex = 0;
             // 
+            // bDeleteDelop
+            // 
+            this.bDeleteDelop.BackColor = System.Drawing.Color.Red;
+            this.bDeleteDelop.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bDeleteDelop.FlatAppearance.BorderSize = 0;
+            this.bDeleteDelop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bDeleteDelop.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bDeleteDelop.ForeColor = System.Drawing.Color.White;
+            this.bDeleteDelop.Location = new System.Drawing.Point(115, 114);
+            this.bDeleteDelop.Margin = new System.Windows.Forms.Padding(0);
+            this.bDeleteDelop.Name = "bDeleteDelop";
+            this.bDeleteDelop.Size = new System.Drawing.Size(67, 34);
+            this.bDeleteDelop.TabIndex = 3;
+            this.bDeleteDelop.Text = "xoá";
+            this.bDeleteDelop.UseVisualStyleBackColor = false;
+            this.bDeleteDelop.Click += new System.EventHandler(this.bDeleteDelop_Click);
+            // 
+            // bSave
+            // 
+            this.bSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bSave.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.bSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bSave.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bSave.Location = new System.Drawing.Point(187, 114);
+            this.bSave.Name = "bSave";
+            this.bSave.Size = new System.Drawing.Size(140, 34);
+            this.bSave.TabIndex = 2;
+            this.bSave.Text = "Lưu";
+            this.bSave.UseVisualStyleBackColor = true;
+            this.bSave.Click += new System.EventHandler(this.bSave_Click);
+            // 
+            // tName
+            // 
+            this.tName.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tName.Location = new System.Drawing.Point(8, 53);
+            this.tName.Name = "tName";
+            this.tName.Size = new System.Drawing.Size(319, 38);
+            this.tName.TabIndex = 1;
+            this.tName.TextChanged += new System.EventHandler(this.tName_TextChanged);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -59,35 +99,6 @@ namespace QL_ThuySan.components
             this.label1.Size = new System.Drawing.Size(83, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên kho:";
-            // 
-            // tName
-            // 
-            this.tName.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tName.Location = new System.Drawing.Point(8, 53);
-            this.tName.Name = "tName";
-            this.tName.Size = new System.Drawing.Size(306, 38);
-            this.tName.TabIndex = 1;
-            this.tName.TextChanged += new System.EventHandler(this.tName_TextChanged);
-            // 
-            // bSave
-            // 
-            this.bSave.Location = new System.Drawing.Point(239, 113);
-            this.bSave.Name = "bSave";
-            this.bSave.Size = new System.Drawing.Size(75, 33);
-            this.bSave.TabIndex = 2;
-            this.bSave.Text = "Lưu";
-            this.bSave.UseVisualStyleBackColor = true;
-            this.bSave.Click += new System.EventHandler(this.bSave_Click);
-            // 
-            // bDeleteDelop
-            // 
-            this.bDeleteDelop.Location = new System.Drawing.Point(8, 113);
-            this.bDeleteDelop.Name = "bDeleteDelop";
-            this.bDeleteDelop.Size = new System.Drawing.Size(75, 32);
-            this.bDeleteDelop.TabIndex = 3;
-            this.bDeleteDelop.Text = "xoá";
-            this.bDeleteDelop.UseVisualStyleBackColor = true;
-            this.bDeleteDelop.Click += new System.EventHandler(this.bDeleteDelop_Click);
             // 
             // EditDelop
             // 

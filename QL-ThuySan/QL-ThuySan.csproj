@@ -70,11 +70,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="components\CreateThuySan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\CreateThuySan.Designer.cs">
+      <DependentUpon>CreateThuySan.cs</DependentUpon>
+    </Compile>
     <Compile Include="components\EditDelop.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="components\EditDelop.Designer.cs">
       <DependentUpon>EditDelop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="components\EditThuySan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\EditThuySan.Designer.cs">
+      <DependentUpon>EditThuySan.cs</DependentUpon>
     </Compile>
     <Compile Include="components\LIThuySan.cs">
       <SubType>UserControl</SubType>
@@ -163,8 +175,14 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utils\Constants.cs" />
+    <EmbeddedResource Include="components\CreateThuySan.resx">
+      <DependentUpon>CreateThuySan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="components\EditDelop.resx">
       <DependentUpon>EditDelop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\EditThuySan.resx">
+      <DependentUpon>EditThuySan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="components\LIThuySan.resx">
       <DependentUpon>LIThuySan.cs</DependentUpon>
@@ -244,6 +262,9 @@
     <Content Include="res\icon\search-regular-24.png" />
     <Content Include="res\icon\store-alt-regular.png" />
     <Content Include="res\icon\truck-solid-24.png" />
+    <Content Include="res\icon\x-circle-regular-60.png" />
+    <Content Include="res\icon\x-regular-24.png" />
+    <Content Include="res\icon\x-regular-72.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

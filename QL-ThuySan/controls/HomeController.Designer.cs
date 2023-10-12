@@ -42,15 +42,15 @@ namespace QL_ThuySan.controls
             this.panel5 = new System.Windows.Forms.Panel();
             this.TSearch = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.lTongTonKho = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.bAddDepot = new System.Windows.Forms.Button();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.pEditDelop = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lTongTonKho = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.bAddDepot = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.PList.SuspendLayout();
@@ -60,9 +60,9 @@ namespace QL_ThuySan.controls
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -205,81 +205,6 @@ namespace QL_ThuySan.controls
             this.panel4.Size = new System.Drawing.Size(367, 726);
             this.panel4.TabIndex = 1;
             // 
-            // lTongTonKho
-            // 
-            this.lTongTonKho.AutoSize = true;
-            this.lTongTonKho.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lTongTonKho.Location = new System.Drawing.Point(3, 28);
-            this.lTongTonKho.Name = "lTongTonKho";
-            this.lTongTonKho.Size = new System.Drawing.Size(28, 32);
-            this.lTongTonKho.TabIndex = 1;
-            this.lTongTonKho.Text = "0";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(202, 28);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Tổng lượng hàng tồn:";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.panel8);
-            this.panel2.Controls.Add(this.panel7);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1242, 66);
-            this.panel2.TabIndex = 0;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel7.Location = new System.Drawing.Point(0, 64);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1242, 2);
-            this.panel7.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(382, 59);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Quản lý kho hàng";
-            // 
-            // bAddDepot
-            // 
-            this.bAddDepot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
-            this.bAddDepot.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bAddDepot.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bAddDepot.ForeColor = System.Drawing.Color.White;
-            this.bAddDepot.Location = new System.Drawing.Point(11, 12);
-            this.bAddDepot.Name = "bAddDepot";
-            this.bAddDepot.Size = new System.Drawing.Size(115, 44);
-            this.bAddDepot.TabIndex = 2;
-            this.bAddDepot.Text = "Thêm kho";
-            this.bAddDepot.UseVisualStyleBackColor = false;
-            this.bAddDepot.Click += new System.EventHandler(this.bAddDepot_Click);
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.bAddDepot);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel8.Location = new System.Drawing.Point(1104, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(138, 64);
-            this.panel8.TabIndex = 3;
-            // 
             // pEditDelop
             // 
             this.pEditDelop.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -300,6 +225,83 @@ namespace QL_ThuySan.controls
             this.panel10.Size = new System.Drawing.Size(367, 58);
             this.panel10.TabIndex = 3;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(202, 28);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Tổng lượng hàng tồn:";
+            // 
+            // lTongTonKho
+            // 
+            this.lTongTonKho.AutoSize = true;
+            this.lTongTonKho.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lTongTonKho.Location = new System.Drawing.Point(3, 28);
+            this.lTongTonKho.Name = "lTongTonKho";
+            this.lTongTonKho.Size = new System.Drawing.Size(28, 32);
+            this.lTongTonKho.TabIndex = 1;
+            this.lTongTonKho.Text = "0";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.panel8);
+            this.panel2.Controls.Add(this.panel7);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1242, 66);
+            this.panel2.TabIndex = 0;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.bAddDepot);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel8.Location = new System.Drawing.Point(1104, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(138, 64);
+            this.panel8.TabIndex = 3;
+            // 
+            // bAddDepot
+            // 
+            this.bAddDepot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
+            this.bAddDepot.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bAddDepot.FlatAppearance.BorderSize = 0;
+            this.bAddDepot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bAddDepot.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bAddDepot.ForeColor = System.Drawing.Color.White;
+            this.bAddDepot.Location = new System.Drawing.Point(11, 15);
+            this.bAddDepot.Name = "bAddDepot";
+            this.bAddDepot.Size = new System.Drawing.Size(115, 32);
+            this.bAddDepot.TabIndex = 2;
+            this.bAddDepot.Text = "Thêm kho";
+            this.bAddDepot.UseVisualStyleBackColor = false;
+            this.bAddDepot.Click += new System.EventHandler(this.bAddDepot_Click);
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel7.Location = new System.Drawing.Point(0, 64);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1242, 2);
+            this.panel7.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(4, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(382, 59);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Quản lý kho hàng";
+            // 
             // HomeController
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -318,11 +320,11 @@ namespace QL_ThuySan.controls
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel8.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
             this.ResumeLayout(false);
 
         }

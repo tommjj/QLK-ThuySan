@@ -15,19 +15,54 @@ namespace QL_ThuySan.controls
     {
         private FrRoot root;
 
+        private EditThuySan editThuySan;
+
         private List<models.ThuySan> List;
         public GoodsController(FrRoot root)
         {
             this.root = root;
             InitializeComponent();
-            SetList();
-            RenderList();
+            Init();          
         }
+
+        public EditThuySan getEditThuySan()
+        {
+            return editThuySan;
+        }
+
+        private void Init()
+        {
+            editThuySan = new EditThuySan(root);
+
+            editThuySan.SetId(-1);
+
+            pEditTSControl.Controls.Add(editThuySan);
+        }  
 
         private void SetList()
         {
             List = root.getContext().ThuySans.ToList();
         }
+
+        private void RenderList()
+        {
+            pUnList.Controls.Clear();
+
+            foreach(var item in List)
+            {
+                var temp = new LIThuySan(this) {
+                    NameTS = item.ten,
+                    Gia = item.gia_ban,
+                    Id = item.Id_ts                    
+                };
+
+                temp.ReRender();
+
+                pUnList.Controls.Add(temp);
+            }
+
+            ResizeList();
+        }  
 
         private void RenderList(string str)
         {
@@ -53,31 +88,17 @@ namespace QL_ThuySan.controls
                     temp.ReRender();
 
                     pUnList.Controls.Add(temp);
-                }
-                
+                }       
             }
 
             ResizeList();
         }
 
-        private void RenderList()
+
+        public void ReLoad()
         {
-            pUnList.Controls.Clear();
-
-            foreach(var item in List)
-            {
-                var temp = new LIThuySan(this) {
-                    NameTS = item.ten,
-                    Gia = item.gia_ban,
-                    Id = item.Id_ts                    
-                };
-
-                temp.ReRender();
-
-                pUnList.Controls.Add(temp);
-            }
-
-            ResizeList();
+            SetList();
+            RenderList(tSearch.Text);
         }
 
         protected override void OnResize(System.EventArgs e)
@@ -98,6 +119,11 @@ namespace QL_ThuySan.controls
         private void tSearch_TextChanged(object sender, EventArgs e)
         {
             RenderList(tSearch.Text);
+        }
+
+        private void bAddTS_Click(object sender, EventArgs e)
+        {
+            root.SetMiniControl(new CreateThuySan(root));
         }
     }
 }

@@ -35,7 +35,7 @@ namespace QL_ThuySan.components
 
         private void ClickEv(object sender, EventArgs e)
         {
-            MessageBox.Show("click");
+            goodsController.getEditThuySan().SetId(Id);
         }
     }
 }

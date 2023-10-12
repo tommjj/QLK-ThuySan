@@ -33,15 +33,16 @@ namespace QL_ThuySan.controls
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pUnList = new System.Windows.Forms.FlowLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tSearch = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.pEditTSControl = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.bAddTS = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.pUnList = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -49,6 +50,7 @@ namespace QL_ThuySan.controls
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -68,7 +70,7 @@ namespace QL_ThuySan.controls
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel1.Controls.Add(this.panel3, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel4, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pEditTSControl, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 68);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
@@ -88,6 +90,17 @@ namespace QL_ThuySan.controls
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(852, 730);
             this.panel3.TabIndex = 0;
+            // 
+            // pUnList
+            // 
+            this.pUnList.AutoScroll = true;
+            this.pUnList.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pUnList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pUnList.Location = new System.Drawing.Point(0, 63);
+            this.pUnList.Name = "pUnList";
+            this.pUnList.Padding = new System.Windows.Forms.Padding(6, 2, 0, 0);
+            this.pUnList.Size = new System.Drawing.Size(852, 667);
+            this.pUnList.TabIndex = 1;
             // 
             // panel6
             // 
@@ -132,14 +145,14 @@ namespace QL_ThuySan.controls
             this.tSearch.TabIndex = 1;
             this.tSearch.TextChanged += new System.EventHandler(this.tSearch_TextChanged);
             // 
-            // panel4
+            // pEditTSControl
             // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(852, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(366, 730);
-            this.panel4.TabIndex = 1;
+            this.pEditTSControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pEditTSControl.Location = new System.Drawing.Point(852, 0);
+            this.pEditTSControl.Margin = new System.Windows.Forms.Padding(0);
+            this.pEditTSControl.Name = "pEditTSControl";
+            this.pEditTSControl.Size = new System.Drawing.Size(366, 730);
+            this.pEditTSControl.TabIndex = 1;
             // 
             // panel2
             // 
@@ -154,12 +167,29 @@ namespace QL_ThuySan.controls
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.bAddTS);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(532, 0);
+            this.panel5.Location = new System.Drawing.Point(940, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(686, 68);
+            this.panel5.Size = new System.Drawing.Size(278, 68);
             this.panel5.TabIndex = 1;
+            // 
+            // bAddTS
+            // 
+            this.bAddTS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
+            this.bAddTS.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bAddTS.FlatAppearance.BorderSize = 0;
+            this.bAddTS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bAddTS.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bAddTS.ForeColor = System.Drawing.Color.White;
+            this.bAddTS.Location = new System.Drawing.Point(71, 16);
+            this.bAddTS.Name = "bAddTS";
+            this.bAddTS.Size = new System.Drawing.Size(193, 36);
+            this.bAddTS.TabIndex = 0;
+            this.bAddTS.Text = "Thêm thuỷ sản";
+            this.bAddTS.UseVisualStyleBackColor = false;
+            this.bAddTS.Click += new System.EventHandler(this.bAddTS_Click);
             // 
             // label1
             // 
@@ -170,17 +200,6 @@ namespace QL_ThuySan.controls
             this.label1.Size = new System.Drawing.Size(417, 59);
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh sách thuỷ sản";
-            // 
-            // pUnList
-            // 
-            this.pUnList.AutoScroll = true;
-            this.pUnList.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pUnList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pUnList.Location = new System.Drawing.Point(0, 63);
-            this.pUnList.Name = "pUnList";
-            this.pUnList.Padding = new System.Windows.Forms.Padding(6, 2, 0, 0);
-            this.pUnList.Size = new System.Drawing.Size(852, 667);
-            this.pUnList.TabIndex = 1;
             // 
             // GoodsController
             // 
@@ -198,6 +217,7 @@ namespace QL_ThuySan.controls
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -208,7 +228,7 @@ namespace QL_ThuySan.controls
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel pEditTSControl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
@@ -216,5 +236,6 @@ namespace QL_ThuySan.controls
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox tSearch;
         private System.Windows.Forms.FlowLayoutPanel pUnList;
+        private System.Windows.Forms.Button bAddTS;
     }
 }

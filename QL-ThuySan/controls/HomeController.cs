@@ -45,6 +45,17 @@ namespace QL_ThuySan.controls
         {
             LoadCbKho();
             ReRander(TSearch.Text);
+            LoadTongTonKho();
+        }
+
+        public void LoadTongTonKho()
+        {
+            int sum = 0;
+            foreach(var item in List)
+            {
+              sum += item.so_luong;
+            }
+            lTongTonKho.Text = sum.ToString();
         }
 
         private void LoadCbKho()
@@ -81,8 +92,8 @@ namespace QL_ThuySan.controls
             ResizeList();
         }
 
-        private void ReRander(string str)
-        {
+        public void ReRander(string str)
+        {     
             if(String.IsNullOrWhiteSpace(str))
             {
                 ReRander();
@@ -115,8 +126,9 @@ namespace QL_ThuySan.controls
                 List = root.getContext().TonKhoes.ToList();
 
                 ReRander(TSearch.Text);
+                LoadTongTonKho();
 
-                editDelop.SetId(-1);
+                editDelop.SetId(-1);        
                 return;
             }
             var kho = root.getContext().Khoes.SingleOrDefault(s => s.ten_kho == cbKho.SelectedItem.ToString());       
@@ -126,6 +138,7 @@ namespace QL_ThuySan.controls
             editDelop.SetId(kho.Id_kho);
 
             ReRander(TSearch.Text);
+            LoadTongTonKho();
         }
 
         

@@ -54,6 +54,19 @@ namespace QL_ThuySan
             this.mainLayout = new System.Windows.Forms.TableLayoutPanel();
             this.Main = new System.Windows.Forms.Panel();
             this.root = new System.Windows.Forms.Panel();
+            this.pMiniForm = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.pMiniControl = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.pExtensionMiniForm = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pExtensionMiniControl = new System.Windows.Forms.Panel();
             this.pNav.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -68,6 +81,15 @@ namespace QL_ThuySan
             this.panel7.SuspendLayout();
             this.mainLayout.SuspendLayout();
             this.root.SuspendLayout();
+            this.pMiniForm.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.pExtensionMiniForm.SuspendLayout();
+            this.panel15.SuspendLayout();
+            this.panel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pNav
@@ -379,6 +401,7 @@ namespace QL_ThuySan
             this.mainLayout.Name = "mainLayout";
             this.mainLayout.RowCount = 1;
             this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 798F));
             this.mainLayout.Size = new System.Drawing.Size(1485, 798);
             this.mainLayout.TabIndex = 1;
             // 
@@ -404,11 +427,156 @@ namespace QL_ThuySan
             this.root.Size = new System.Drawing.Size(1485, 798);
             this.root.TabIndex = 2;
             // 
+            // pMiniForm
+            // 
+            this.pMiniForm.Controls.Add(this.panel13);
+            this.pMiniForm.Controls.Add(this.panel12);
+            this.pMiniForm.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pMiniForm.Location = new System.Drawing.Point(687, 0);
+            this.pMiniForm.Name = "pMiniForm";
+            this.pMiniForm.Size = new System.Drawing.Size(798, 798);
+            this.pMiniForm.TabIndex = 0;
+            this.pMiniForm.Visible = false;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.White;
+            this.panel13.Controls.Add(this.tableLayoutPanel1);
+            this.panel13.Controls.Add(this.panel14);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel13.Location = new System.Drawing.Point(4, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(794, 798);
+            this.panel13.TabIndex = 1;
+            // 
+            // pMiniControl
+            // 
+            this.pMiniControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pMiniControl.Location = new System.Drawing.Point(85, 50);
+            this.pMiniControl.Margin = new System.Windows.Forms.Padding(0);
+            this.pMiniControl.Name = "pMiniControl";
+            this.pMiniControl.Size = new System.Drawing.Size(709, 704);
+            this.pMiniControl.TabIndex = 1;
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.pictureBox1);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel14.Location = new System.Drawing.Point(0, 0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(794, 44);
+            this.panel14.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(42, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pCloseMiniForm);
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(247)))));
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel12.Location = new System.Drawing.Point(0, 0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(4, 798);
+            this.panel12.TabIndex = 0;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.70529F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 89.29471F));
+            this.tableLayoutPanel1.Controls.Add(this.pMiniControl, 1, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 44);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.763926F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.23608F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(794, 754);
+            this.tableLayoutPanel1.TabIndex = 2;
+            // 
+            // pExtensionMiniForm
+            // 
+            this.pExtensionMiniForm.Controls.Add(this.panel16);
+            this.pExtensionMiniForm.Controls.Add(this.panel15);
+            this.pExtensionMiniForm.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pExtensionMiniForm.Location = new System.Drawing.Point(296, 0);
+            this.pExtensionMiniForm.Name = "pExtensionMiniForm";
+            this.pExtensionMiniForm.Size = new System.Drawing.Size(391, 798);
+            this.pExtensionMiniForm.TabIndex = 0;
+            this.pExtensionMiniForm.Visible = false;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.White;
+            this.panel15.Controls.Add(this.pExtensionMiniControl);
+            this.panel15.Controls.Add(this.panel17);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel15.Location = new System.Drawing.Point(0, 0);
+            this.panel15.Margin = new System.Windows.Forms.Padding(0);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(391, 798);
+            this.panel15.TabIndex = 0;
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(247)))));
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel16.Location = new System.Drawing.Point(0, 0);
+            this.panel16.Margin = new System.Windows.Forms.Padding(0);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(4, 798);
+            this.panel16.TabIndex = 0;
+            // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.pictureBox2);
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel17.Location = new System.Drawing.Point(0, 0);
+            this.panel17.Margin = new System.Windows.Forms.Padding(0);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(391, 44);
+            this.panel17.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(4, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(42, 40);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pCloseExtension);
+            // 
+            // pExtensionMiniControl
+            // 
+            this.pExtensionMiniControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pExtensionMiniControl.Location = new System.Drawing.Point(0, 44);
+            this.pExtensionMiniControl.Margin = new System.Windows.Forms.Padding(0);
+            this.pExtensionMiniControl.Name = "pExtensionMiniControl";
+            this.pExtensionMiniControl.Size = new System.Drawing.Size(391, 754);
+            this.pExtensionMiniControl.TabIndex = 1;
+            // 
             // FrRoot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1485, 798);
+            this.Controls.Add(this.pExtensionMiniForm);
+            this.Controls.Add(this.pMiniForm);
             this.Controls.Add(this.root);
             this.MinimumSize = new System.Drawing.Size(1503, 845);
             this.Name = "FrRoot";
@@ -429,6 +597,15 @@ namespace QL_ThuySan
             this.panel7.ResumeLayout(false);
             this.mainLayout.ResumeLayout(false);
             this.root.ResumeLayout(false);
+            this.pMiniForm.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.pExtensionMiniForm.ResumeLayout(false);
+            this.panel15.ResumeLayout(false);
+            this.panel17.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -459,6 +636,19 @@ namespace QL_ThuySan
         private System.Windows.Forms.Button BLogout;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel pMiniForm;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel pMiniControl;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel pExtensionMiniForm;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel pExtensionMiniControl;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

@@ -66,6 +66,11 @@ namespace QL_ThuySan
             return homeController;
         }
 
+        public GoodsController GetGoodsController()
+        {
+            return goodsController;
+        }
+
         public Models getContext()
         {
             return context;
@@ -79,12 +84,16 @@ namespace QL_ThuySan
         public void Setup()
         {
             //SetLock();
+
+          
+
+            /* ... */
+
             //
             SetNavButtonColorActive(bHome);
             SetMainControl(homeController);
 
-            ResizeControl();
-           
+            ResizeControl();        
         }
 
         public void SetLock()
@@ -100,9 +109,10 @@ namespace QL_ThuySan
 
             root.Controls.Add(mainLayout);
 
-            SetNavButtonColorActive(bHome);
-            SetMainControl(homeController);
+            Button1_Click(bHome, new EventArgs());
         }
+
+
 
         protected override void OnResize(System.EventArgs e)
         {
@@ -174,9 +184,11 @@ namespace QL_ThuySan
             {
                 case Pages.HOME_PAGE:
                     SetMainControl(homeController);
+                    homeController.ReLoad();
                     break;
                 case Pages.GOODS_PAGE:
                     SetMainControl(goodsController);
+                    goodsController.ReLoad();
                     break;
                 case Pages.EXPORT_PAGE:
                     SetMainControl(exportController);
@@ -195,10 +207,49 @@ namespace QL_ThuySan
             }
         }
 
+        public void SetMiniControl(Control c)
+        {
+            pMiniControl.Controls.Clear();
+            pMiniControl.Controls.Add(c);
+
+            pMiniForm.Visible = true;
+        }
+
+        public void MiniControlClose()
+        {
+            pMiniControl.Controls[0].Dispose();
+            pMiniControl.Controls.Clear();
+            pMiniForm.Visible = false;
+        }
+
         private void LogoutClick(object sender, EventArgs e)
         {
             SetLock();
             ResizeControl();
+        }
+
+        private void pCloseMiniForm(object sender, EventArgs e)
+        {
+            MiniControlClose();
+        }
+
+        public void SetExMiniControl(Control c)
+        {
+            pExtensionMiniControl.Controls.Clear();
+            pExtensionMiniControl.Controls.Add(c);
+
+            pExtensionMiniForm.Visible = true;
+        }
+
+        public void CloseExtension()
+        {
+            pExtensionMiniControl.Controls.Clear();
+            pExtensionMiniForm.Visible = false;
+        }
+
+        private void pCloseExtension(object sender, EventArgs e)
+        {
+            CloseExtension();
         }
     }
 }
