@@ -71,6 +71,11 @@ namespace QL_ThuySan
             return goodsController;
         }
 
+        public CustomerController GetCustomerController()
+        {
+            return customerController;
+        }
+
         public Models getContext()
         {
             return context;
@@ -198,6 +203,7 @@ namespace QL_ThuySan
                     break;
                 case Pages.CUSTOMER_PAGE:
                     SetMainControl(customerController);
+                    customerController.ReLoad();
                     break;
                 case Pages.SUPPLIER_PAGE:
                     SetMainControl(supplierContrller);

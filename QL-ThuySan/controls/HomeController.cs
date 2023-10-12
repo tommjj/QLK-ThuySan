@@ -154,7 +154,7 @@ namespace QL_ThuySan.controls
         {
             foreach(Control item in pUnList.Controls)
             {
-                item.Width = pUnList.Width - 10;
+                item.Width = pUnList.Width - (pUnList.Controls.Count < ((pUnList.Height - 6) / 91) + 3 ? 10 : 25);
             }
         }
 

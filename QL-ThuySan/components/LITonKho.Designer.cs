@@ -30,16 +30,16 @@ namespace QL_ThuySan.components
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lSoLuong = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.lNameKho = new System.Windows.Forms.Label();
             this.lNameTS = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lSoLuong = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -58,6 +58,26 @@ namespace QL_ThuySan.components
             this.tableLayoutPanel1.Size = new System.Drawing.Size(869, 85);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lSoLuong);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(653, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(213, 79);
+            this.panel2.TabIndex = 1;
+            // 
+            // lSoLuong
+            // 
+            this.lSoLuong.AutoSize = true;
+            this.lSoLuong.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lSoLuong.Location = new System.Drawing.Point(3, 17);
+            this.lSoLuong.Name = "lSoLuong";
+            this.lSoLuong.Size = new System.Drawing.Size(32, 38);
+            this.lSoLuong.TabIndex = 0;
+            this.lSoLuong.Text = "0";
+            this.lSoLuong.Click += new System.EventHandler(this.label3_Click);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel3);
@@ -70,6 +90,16 @@ namespace QL_ThuySan.components
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(650, 85);
             this.panel1.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(5, 85);
+            this.panel3.TabIndex = 3;
             // 
             // label1
             // 
@@ -103,36 +133,6 @@ namespace QL_ThuySan.components
             this.lNameTS.TabIndex = 0;
             this.lNameTS.Text = "name";
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.lSoLuong);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(653, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(213, 79);
-            this.panel2.TabIndex = 1;
-            // 
-            // lSoLuong
-            // 
-            this.lSoLuong.AutoSize = true;
-            this.lSoLuong.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lSoLuong.Location = new System.Drawing.Point(3, 17);
-            this.lSoLuong.Name = "lSoLuong";
-            this.lSoLuong.Size = new System.Drawing.Size(32, 38);
-            this.lSoLuong.TabIndex = 0;
-            this.lSoLuong.Text = "0";
-            this.lSoLuong.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(5, 85);
-            this.panel3.TabIndex = 3;
-            // 
             // LITonKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -141,10 +141,10 @@ namespace QL_ThuySan.components
             this.Name = "LITonKho";
             this.Size = new System.Drawing.Size(869, 85);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

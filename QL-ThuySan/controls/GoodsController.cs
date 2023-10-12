@@ -99,6 +99,7 @@ namespace QL_ThuySan.controls
         {
             SetList();
             RenderList(tSearch.Text);
+            editThuySan.SetId(-1);
         }
 
         protected override void OnResize(System.EventArgs e)
@@ -112,7 +113,7 @@ namespace QL_ThuySan.controls
         {
             foreach (Control item in pUnList.Controls)
             {
-                item.Width = pUnList.Width - 10;
+                item.Width = pUnList.Width - (pUnList.Controls.Count < ((pUnList.Height-6) / 74)+3 ? 10 : 25);
             }
         }
 
