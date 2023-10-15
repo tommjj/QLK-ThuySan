@@ -17,7 +17,7 @@ namespace QL_ThuySan.controls
 
         private EditThuySan editThuySan;
 
-        private List<models.ThuySan> List;
+        private List<models.ThuySan> List = new List<models.ThuySan>();
         public GoodsController(FrRoot root)
         {
             this.root = root;
@@ -37,19 +37,34 @@ namespace QL_ThuySan.controls
             editThuySan.SetId(-1);
 
             pEditTSControl.Controls.Add(editThuySan);
+
+            cbSort.SelectedIndex = 0;
         }  
 
         private void SetList()
         {
-            List = root.getContext().ThuySans.ToList();
+            List = root.getContext().ThuySans.ToList();     
         }
 
         private void RenderList()
         {
-            pUnList.Controls.Clear();
+            int controlsNumber = pUnList.Controls.Count;
+            int count = 0;
 
-            foreach(var item in List)
+            foreach (var item in List)
             {
+                if (count < controlsNumber)
+                {
+                    var control = (LIThuySan)pUnList.Controls[count];
+                    control.NameTS = item.ten;
+                    control.Gia = item.gia_ban;
+                    control.Id = item.Id_ts;
+
+                    control.ReRender();
+                    count++;
+                    continue;
+                }
+
                 var temp = new LIThuySan(this) {
                     NameTS = item.ten,
                     Gia = item.gia_ban,
@@ -59,6 +74,12 @@ namespace QL_ThuySan.controls
                 temp.ReRender();
 
                 pUnList.Controls.Add(temp);
+            }
+
+            while (count < controlsNumber)
+            {
+                pUnList.Controls.RemoveAt(pUnList.Controls.Count - 1);
+                count++;
             }
 
             ResizeList();
@@ -72,12 +93,25 @@ namespace QL_ThuySan.controls
                 return;
             }
 
-            pUnList.Controls.Clear();
+            int controlsNumber = pUnList.Controls.Count;
+            int count = 0;
 
             foreach (var item in List)
             {
                 if(item.ten.ToLower().Contains(str.ToLower()))
                 {
+                    if (count < controlsNumber)
+                    {
+                        var control = (LIThuySan)pUnList.Controls[count];
+                        control.NameTS = item.ten;
+                        control.Gia = item.gia_ban;
+                        control.Id = item.Id_ts;
+
+                        control.ReRender();
+                        count++;
+                        continue;
+                    }
+
                     var temp = new LIThuySan(this)
                     {
                         NameTS = item.ten,
@@ -91,6 +125,12 @@ namespace QL_ThuySan.controls
                 }       
             }
 
+            while (count < controlsNumber)
+            {
+                pUnList.Controls.RemoveAt(pUnList.Controls.Count - 1);
+                count++;
+            }
+
             ResizeList();
         }
 
@@ -98,8 +138,10 @@ namespace QL_ThuySan.controls
         public void ReLoad()
         {
             SetList();
+            SortList();
+
             RenderList(tSearch.Text);
-            editThuySan.SetId(-1);
+            editThuySan.SetId(-1);        
         }
 
         protected override void OnResize(System.EventArgs e)
@@ -125,6 +167,34 @@ namespace QL_ThuySan.controls
         private void bAddTS_Click(object sender, EventArgs e)
         {
             root.SetMiniControl(new CreateThuySan(root));
+        }
+
+        private void SortList()
+        {
+            if (List == null)
+                return;
+
+            switch (cbSort.SelectedIndex)
+            {
+                case 0:
+                    List = List.OrderByDescending(e => e.Id_ts).ToList();
+                    break;
+                case 1:
+                    List = List.OrderBy(e => e.Id_ts).ToList();
+                    break;
+                case 2:
+                    List = List.OrderBy(e => e.ten).ToList();
+                    break;
+                case 3:
+                    List = List.OrderByDescending(e => e.ten).ToList();
+                    break;
+            }
+        }
+
+        private void cbSort_SelectedIndexChanged(object sender, EventArgs ev)
+        {
+            SortList();
+            RenderList(tSearch.Text);
         }
     }
 }

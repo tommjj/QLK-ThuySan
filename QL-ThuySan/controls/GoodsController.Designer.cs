@@ -36,8 +36,9 @@ namespace QL_ThuySan.controls
             this.pUnList = new System.Windows.Forms.FlowLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tSearch = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbSort = new System.Windows.Forms.ComboBox();
             this.pEditTSControl = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -113,11 +114,13 @@ namespace QL_ThuySan.controls
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 119F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 52F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.tSearch, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.tSearch, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.cbSort, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -126,24 +129,40 @@ namespace QL_ThuySan.controls
             this.tableLayoutPanel2.Size = new System.Drawing.Size(852, 63);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
-            this.pictureBox1.Size = new System.Drawing.Size(53, 41);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // tSearch
             // 
             this.tSearch.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tSearch.Location = new System.Drawing.Point(73, 3);
+            this.tSearch.Location = new System.Drawing.Point(174, 3);
             this.tSearch.Name = "tSearch";
-            this.tSearch.Size = new System.Drawing.Size(776, 38);
+            this.tSearch.Size = new System.Drawing.Size(675, 38);
             this.tSearch.TabIndex = 1;
             this.tSearch.TextChanged += new System.EventHandler(this.tSearch_TextChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(122, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.pictureBox1.Size = new System.Drawing.Size(46, 41);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // cbSort
+            // 
+            this.cbSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSort.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSort.FormattingEnabled = true;
+            this.cbSort.Items.AddRange(new object[] {
+            "New",
+            "Old",
+            "A-Z",
+            "Z-A"});
+            this.cbSort.Location = new System.Drawing.Point(3, 3);
+            this.cbSort.Name = "cbSort";
+            this.cbSort.Size = new System.Drawing.Size(113, 39);
+            this.cbSort.TabIndex = 2;
+            this.cbSort.SelectedIndexChanged += new System.EventHandler(this.cbSort_SelectedIndexChanged);
             // 
             // pEditTSControl
             // 
@@ -237,5 +256,6 @@ namespace QL_ThuySan.controls
         private System.Windows.Forms.TextBox tSearch;
         private System.Windows.Forms.FlowLayoutPanel pUnList;
         private System.Windows.Forms.Button bAddTS;
+        private System.Windows.Forms.ComboBox cbSort;
     }
 }

@@ -50,10 +50,24 @@ namespace QL_ThuySan.controls
 
         private void RenderList()
         {
-            pUnList.Controls.Clear();
+            int controlsNumber = pUnList.Controls.Count;
+            int count = 0;
 
             foreach (var item in List)
             {
+                if (count < controlsNumber)
+                {
+                    var control = (LICustomer)pUnList.Controls[count];
+                    control.Id = item.Id_kh;
+                    control.NameKH = item.ten_kh;
+                    control.At = item.dia_chi;
+                    control.SDT = item.sdt;
+
+                    control.ReRender();
+                    count++;
+                    continue;
+                }
+
                 var temp = new LICustomer(this)
                 {
                     Id = item.Id_kh,
@@ -67,6 +81,12 @@ namespace QL_ThuySan.controls
                 pUnList.Controls.Add(temp);
             }
 
+            while (count < controlsNumber)
+            {
+                pUnList.Controls.RemoveAt(pUnList.Controls.Count - 1);
+                count++;
+            }
+
             ResizeList();
         }
 
@@ -78,12 +98,26 @@ namespace QL_ThuySan.controls
                 return;
             }
 
-            pUnList.Controls.Clear();
+            int controlsNumber = pUnList.Controls.Count;
+            int count = 0;
 
             foreach (var item in List)
             {
                 if (item.ten_kh.ToLower().Contains(text.ToLower()))
                 {
+                    if (count < controlsNumber)
+                    {
+                        var control = (LICustomer)pUnList.Controls[count];
+                        control.Id = item.Id_kh;
+                        control.NameKH = item.ten_kh;
+                        control.At = item.dia_chi;
+                        control.SDT = item.sdt;
+
+                        control.ReRender();
+                        count++;
+                        continue;
+                    }
+
                     var temp = new LICustomer(this)
                     {
                         Id = item.Id_kh,
@@ -96,6 +130,12 @@ namespace QL_ThuySan.controls
 
                     pUnList.Controls.Add(temp);
                 }
+            }
+
+            while (count < controlsNumber)
+            {
+                pUnList.Controls.RemoveAt(pUnList.Controls.Count - 1);
+                count++;
             }
 
             ResizeList();

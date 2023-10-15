@@ -76,6 +76,21 @@ namespace QL_ThuySan
             return customerController;
         }
 
+        public SupplierContrller GetSupplierContrller()
+        {
+            return supplierContrller;
+        }
+
+        public ImportController GetImportController()
+        {
+            return importController;
+        }
+
+        public ExportController GetExportController()
+        {
+            return exportController;
+        }
+
         public Models getContext()
         {
             return context;
@@ -200,6 +215,7 @@ namespace QL_ThuySan
                     break;
                 case Pages.IMPORT_PAGE:
                     SetMainControl(importController);
+                    importController.ReLoad();
                     break;
                 case Pages.CUSTOMER_PAGE:
                     SetMainControl(customerController);
@@ -207,6 +223,7 @@ namespace QL_ThuySan
                     break;
                 case Pages.SUPPLIER_PAGE:
                     SetMainControl(supplierContrller);
+                    supplierContrller.ReLoad();
                     break;
                 default:
                     break;

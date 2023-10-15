@@ -76,6 +76,12 @@
     <Compile Include="components\CreateCustomer.Designer.cs">
       <DependentUpon>CreateCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="components\CreateSupplier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\CreateSupplier.Designer.cs">
+      <DependentUpon>CreateSupplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="components\CreateThuySan.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -94,17 +100,47 @@
     <Compile Include="components\EditDelop.Designer.cs">
       <DependentUpon>EditDelop.cs</DependentUpon>
     </Compile>
+    <Compile Include="components\EditSupplier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\EditSupplier.Designer.cs">
+      <DependentUpon>EditSupplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="components\EditThuySan.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="components\EditThuySan.Designer.cs">
       <DependentUpon>EditThuySan.cs</DependentUpon>
     </Compile>
+    <Compile Include="components\ImportView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\ImportView.Designer.cs">
+      <DependentUpon>ImportView.cs</DependentUpon>
+    </Compile>
     <Compile Include="components\LICustomer.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="components\LICustomer.Designer.cs">
       <DependentUpon>LICustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="components\LIHangView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\LIHangView.Designer.cs">
+      <DependentUpon>LIHangView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="components\LIImport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\LIImport.Designer.cs">
+      <DependentUpon>LIImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="components\LISupplier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\LISupplier.Designer.cs">
+      <DependentUpon>LISupplier.cs</DependentUpon>
     </Compile>
     <Compile Include="components\LIThuySan.cs">
       <SubType>UserControl</SubType>
@@ -196,6 +232,9 @@
     <EmbeddedResource Include="components\CreateCustomer.resx">
       <DependentUpon>CreateCustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="components\CreateSupplier.resx">
+      <DependentUpon>CreateSupplier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="components\CreateThuySan.resx">
       <DependentUpon>CreateThuySan.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,11 +244,26 @@
     <EmbeddedResource Include="components\EditDelop.resx">
       <DependentUpon>EditDelop.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="components\EditSupplier.resx">
+      <DependentUpon>EditSupplier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="components\EditThuySan.resx">
       <DependentUpon>EditThuySan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="components\ImportView.resx">
+      <DependentUpon>ImportView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="components\LICustomer.resx">
       <DependentUpon>LICustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\LIHangView.resx">
+      <DependentUpon>LIHangView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\LIImport.resx">
+      <DependentUpon>LIImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\LISupplier.resx">
+      <DependentUpon>LISupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="components\LIThuySan.resx">
       <DependentUpon>LIThuySan.cs</DependentUpon>
@@ -283,6 +337,7 @@
     <Content Include="res\icon\dashboard-solid.png" />
     <Content Include="res\icon\export.png" />
     <Content Include="res\icon\group-solid-24.png" />
+    <Content Include="res\icon\impor-regular-24.png" />
     <Content Include="res\icon\import.png" />
     <Content Include="res\icon\log-out-circle-regular-24.png" />
     <Content Include="res\icon\package-solid.png" />

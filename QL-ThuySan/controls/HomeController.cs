@@ -75,18 +75,36 @@ namespace QL_ThuySan.controls
         
         private void ReRander()
         {
-            pUnList.Controls.Clear();
+            int controlsNumber = pUnList.Controls.Count;
+            int count = 0;
 
             foreach (var item in List)
             {
+                if (count < controlsNumber)
+                {
+                    var control = (LITonKho)pUnList.Controls[count];
+                    control.NameTS = item.ThuySan.ten;
+                    control.At = item.Kho.ten_kho;
+                    control.SL = item.so_luong;
+                    
+                   control.ReRender();
+                    count++;
+                    continue;
+                }
                 LITonKho temp = new LITonKho
                 {
                     NameTS = item.ThuySan.ten,
                     At = item.Kho.ten_kho,
                     SL = item.so_luong
                 };
-                temp.ReRander();
+                temp.ReRender();
                 pUnList.Controls.Add(temp);
+            }
+
+            while (count < controlsNumber)
+            {
+                pUnList.Controls.RemoveAt(pUnList.Controls.Count-1);
+                count++;
             }
 
             ResizeList();
@@ -99,21 +117,39 @@ namespace QL_ThuySan.controls
                 ReRander();
                 return;
             }
-            pUnList.Controls.Clear();
+            int controlsNumber = pUnList.Controls.Count;
+            int count = 0;
 
             foreach (var item in List)
             {
                 if(item.ThuySan.ten.ToLower().Contains(str.ToLower()))
                 {
+                    if (count < controlsNumber)
+                    {
+                        var control = (LITonKho)pUnList.Controls[count];
+                        control.NameTS = item.ThuySan.ten;
+                        control.At = item.Kho.ten_kho;
+                        control.SL = item.so_luong;
+
+                        control.ReRender();
+                        count++;
+                        continue;
+                    }
                     LITonKho temp = new LITonKho
                     {
                         NameTS = item.ThuySan.ten,
                         At = item.Kho.ten_kho,
                         SL = item.so_luong
                     };
-                    temp.ReRander();
+                    temp.ReRender();
                     pUnList.Controls.Add(temp);
                 }   
+            }
+
+            while (count < controlsNumber)
+            {
+                pUnList.Controls.RemoveAt(pUnList.Controls.Count - 1);
+                count++;
             }
 
             ResizeList();

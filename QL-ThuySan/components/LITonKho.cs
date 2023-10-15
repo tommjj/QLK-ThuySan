@@ -20,10 +20,10 @@ namespace QL_ThuySan.components
         {
             InitializeComponent();
 
-            ReRander();
+            ReRender();
         }
 
-        public void ReRander()
+        public void ReRender()
         {
             lNameTS.Text = NameTS;
             lNameKho.Text = At;
