@@ -36,13 +36,13 @@ namespace QL_ThuySan.controls
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.pUnList = new System.Windows.Forms.FlowLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tSearch = new System.Windows.Forms.TextBox();
             this.pEditKHControl = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -125,6 +125,14 @@ namespace QL_ThuySan.controls
             this.panel3.Size = new System.Drawing.Size(852, 735);
             this.panel3.TabIndex = 3;
             // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 695);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(852, 40);
+            this.panel4.TabIndex = 2;
+            // 
             // pUnList
             // 
             this.pUnList.AutoScroll = true;
@@ -177,6 +185,7 @@ namespace QL_ThuySan.controls
             this.tSearch.Name = "tSearch";
             this.tSearch.Size = new System.Drawing.Size(776, 38);
             this.tSearch.TabIndex = 1;
+            this.tSearch.TextChanged += new System.EventHandler(this.tSearch_TextChanged);
             // 
             // pEditKHControl
             // 
@@ -186,14 +195,6 @@ namespace QL_ThuySan.controls
             this.pEditKHControl.Name = "pEditKHControl";
             this.pEditKHControl.Size = new System.Drawing.Size(366, 735);
             this.pEditKHControl.TabIndex = 2;
-            // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 695);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(852, 40);
-            this.panel4.TabIndex = 2;
             // 
             // ImportController
             // 

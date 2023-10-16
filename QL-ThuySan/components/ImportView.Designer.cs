@@ -39,6 +39,7 @@ namespace QL_ThuySan.components
             this.lName = new System.Windows.Forms.Label();
             this.lSoPhieu = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.bDelete = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -52,7 +53,8 @@ namespace QL_ThuySan.components
             this.bSave = new System.Windows.Forms.Button();
             this.tSDT = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lKho = new System.Windows.Forms.Label();
             this.pMain.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -82,6 +84,7 @@ namespace QL_ThuySan.components
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.lNgayNhap);
             this.panel1.Controls.Add(this.lGia);
+            this.panel1.Controls.Add(this.lKho);
             this.panel1.Controls.Add(this.lSoluong);
             this.panel1.Controls.Add(this.lName);
             this.panel1.Controls.Add(this.lSoPhieu);
@@ -90,6 +93,7 @@ namespace QL_ThuySan.components
             this.panel1.Controls.Add(this.bDelete);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.lfrom);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -120,7 +124,7 @@ namespace QL_ThuySan.components
             // 
             this.lNgayNhap.AutoSize = true;
             this.lNgayNhap.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNgayNhap.Location = new System.Drawing.Point(128, 182);
+            this.lNgayNhap.Location = new System.Drawing.Point(118, 187);
             this.lNgayNhap.Name = "lNgayNhap";
             this.lNgayNhap.Size = new System.Drawing.Size(55, 25);
             this.lNgayNhap.TabIndex = 6;
@@ -130,7 +134,7 @@ namespace QL_ThuySan.components
             // 
             this.lGia.AutoSize = true;
             this.lGia.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lGia.Location = new System.Drawing.Point(110, 147);
+            this.lGia.Location = new System.Drawing.Point(100, 162);
             this.lGia.Name = "lGia";
             this.lGia.Size = new System.Drawing.Size(42, 25);
             this.lGia.TabIndex = 6;
@@ -140,7 +144,7 @@ namespace QL_ThuySan.components
             // 
             this.lSoluong.AutoSize = true;
             this.lSoluong.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lSoluong.Location = new System.Drawing.Point(151, 112);
+            this.lSoluong.Location = new System.Drawing.Point(147, 137);
             this.lSoluong.Name = "lSoluong";
             this.lSoluong.Size = new System.Drawing.Size(42, 25);
             this.lSoluong.TabIndex = 6;
@@ -175,6 +179,23 @@ namespace QL_ThuySan.components
             this.label7.TabIndex = 4;
             this.label7.Text = "Phiếu nhập";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.button1.Location = new System.Drawing.Point(175, 676);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(167, 39);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "chỉnh sửa";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // bDelete
             // 
             this.bDelete.BackColor = System.Drawing.Color.Red;
@@ -195,7 +216,7 @@ namespace QL_ThuySan.components
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(14, 182);
+            this.label5.Location = new System.Drawing.Point(10, 187);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(108, 25);
             this.label5.TabIndex = 0;
@@ -205,7 +226,7 @@ namespace QL_ThuySan.components
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(14, 147);
+            this.label9.Location = new System.Drawing.Point(10, 162);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(90, 25);
             this.label9.TabIndex = 0;
@@ -215,7 +236,7 @@ namespace QL_ThuySan.components
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(14, 112);
+            this.label6.Location = new System.Drawing.Point(10, 137);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(137, 25);
             this.label6.TabIndex = 0;
@@ -320,21 +341,25 @@ namespace QL_ThuySan.components
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên nhà cung cấp:";
             // 
-            // button1
+            // label8
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.button1.Location = new System.Drawing.Point(175, 676);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(167, 39);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "chỉnh sửa";
-            this.button1.UseVisualStyleBackColor = false;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(10, 97);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(49, 25);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Kho:";
+            // 
+            // lKho
+            // 
+            this.lKho.AutoSize = true;
+            this.lKho.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lKho.Location = new System.Drawing.Point(58, 97);
+            this.lKho.Name = "lKho";
+            this.lKho.Size = new System.Drawing.Size(42, 25);
+            this.lKho.TabIndex = 6;
+            this.lKho.Text = "abc";
             // 
             // ImportView
             // 
@@ -377,5 +402,7 @@ namespace QL_ThuySan.components
         private System.Windows.Forms.Label lNgayNhap;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lKho;
+        private System.Windows.Forms.Label label8;
     }
 }

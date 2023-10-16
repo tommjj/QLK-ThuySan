@@ -40,7 +40,7 @@ namespace QL_ThuySan.controls
             importView.SetId(-1);
         }
 
-        private int sumWidth(List<models.TTPhieuNhap> item)
+        private int SumQuantity(List<models.TTPhieuNhap> item)
         {
             int sum = 0;
             foreach(var i in item)
@@ -50,7 +50,7 @@ namespace QL_ThuySan.controls
             return sum;
         } 
 
-        private int sumGia(List<models.TTPhieuNhap> item)
+        private int SumPrice(List<models.TTPhieuNhap> item)
         {
             int sum = 0;
             foreach (var i in item)
@@ -73,8 +73,8 @@ namespace QL_ThuySan.controls
 
                     control.Id = item.Id_pn;
                     control.name = item.NhaCungCap.ten_ncp;
-                    control.Gia = sumGia(item.TTPhieuNhaps.ToList());
-                    control.trongLuong = sumWidth(item.TTPhieuNhaps.ToList());
+                    control.Gia = SumPrice(item.TTPhieuNhaps.ToList());
+                    control.trongLuong = SumQuantity(item.TTPhieuNhaps.ToList());
                     control.daThem = item.da_nhap;
 
                     control.ReRender();
@@ -85,8 +85,8 @@ namespace QL_ThuySan.controls
 
                 temp.Id = item.Id_pn;
                 temp.name = item.NhaCungCap.ten_ncp;
-                temp.Gia = sumGia(item.TTPhieuNhaps.ToList());
-                temp.trongLuong = sumWidth(item.TTPhieuNhaps.ToList());
+                temp.Gia = SumPrice(item.TTPhieuNhaps.ToList());
+                temp.trongLuong = SumQuantity(item.TTPhieuNhaps.ToList());
                 temp.daThem = item.da_nhap;
 
                 temp.ReRender();
@@ -116,7 +116,7 @@ namespace QL_ThuySan.controls
 
             foreach (var item in List)
             {
-                if (item.NhaCungCap.ten_ncp.ToLower().Contains(text.ToLower()))
+                if (item.NhaCungCap.ten_ncp.ToLower().Contains(text.ToLower()) || item.Id_pn.ToString().Contains(text))
                 {
                     if (count < controlsNumber)
                     {
@@ -124,8 +124,8 @@ namespace QL_ThuySan.controls
 
                         control.Id = item.Id_pn;
                         control.name = item.NhaCungCap.ten_ncp;
-                        control.Gia = sumGia(item.TTPhieuNhaps.ToList());
-                        control.trongLuong = sumWidth(item.TTPhieuNhaps.ToList());
+                        control.Gia = SumPrice(item.TTPhieuNhaps.ToList());
+                        control.trongLuong = SumQuantity(item.TTPhieuNhaps.ToList());
                         control.daThem = item.da_nhap;
 
                         control.ReRender();
@@ -136,8 +136,8 @@ namespace QL_ThuySan.controls
 
                     temp.Id = item.Id_pn;
                     temp.name = item.NhaCungCap.ten_ncp;
-                    temp.Gia = sumGia(item.TTPhieuNhaps.ToList());
-                    temp.trongLuong = sumWidth(item.TTPhieuNhaps.ToList());
+                    temp.Gia = SumPrice(item.TTPhieuNhaps.ToList());
+                    temp.trongLuong = SumQuantity(item.TTPhieuNhaps.ToList());
                     temp.daThem = item.da_nhap;
 
 
@@ -176,5 +176,9 @@ namespace QL_ThuySan.controls
             }
         }
 
+        private void tSearch_TextChanged(object sender, EventArgs e)
+        {
+            RenderList(tSearch.Text);
+        }
     }
 }

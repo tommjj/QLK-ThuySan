@@ -14,13 +14,14 @@ namespace QL_ThuySan.components
     {
         private FrRoot root;
         private int Id;
+
         public ImportView(FrRoot root)
         {
             this.root = root;
             InitializeComponent();
         }
 
-        private int sumWidth(List<models.TTPhieuNhap> item)
+        private int SumQuantity(List<models.TTPhieuNhap> item)
         {
             int sum = 0;
             foreach (var i in item)
@@ -30,7 +31,7 @@ namespace QL_ThuySan.components
             return sum;
         }
 
-        private int sumGia(List<models.TTPhieuNhap> item)
+        private int SumPrice(List<models.TTPhieuNhap> item)
         {
             int sum = 0;
             foreach (var i in item)
@@ -56,11 +57,12 @@ namespace QL_ThuySan.components
 
             var pn = root.getContext().PhieuNhaps.Find(Id);
 
+            lKho.Text = pn.Kho.ten_kho;
             lSoPhieu.Text = Id.ToString();
             lName.Text = pn.NhaCungCap.ten_ncp;
 
-            lGia.Text = sumGia(pn.TTPhieuNhaps.ToList()).ToString();
-            lSoluong.Text = sumWidth(pn.TTPhieuNhaps.ToList()).ToString();
+            lGia.Text = SumPrice(pn.TTPhieuNhaps.ToList()).ToString();
+            lSoluong.Text = SumQuantity(pn.TTPhieuNhaps.ToList()).ToString();
 
             if(pn.da_nhap)
             {
@@ -101,6 +103,11 @@ namespace QL_ThuySan.components
                 root.getContext().SaveChanges();
                 root.GetImportController().ReLoad();
             }            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            root.SetMiniControl(new EditPhieuNhap(root, Id));
         }
     }
 }

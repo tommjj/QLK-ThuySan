@@ -100,6 +100,12 @@
     <Compile Include="components\EditDelop.Designer.cs">
       <DependentUpon>EditDelop.cs</DependentUpon>
     </Compile>
+    <Compile Include="components\EditPhieuNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\EditPhieuNhap.Designer.cs">
+      <DependentUpon>EditPhieuNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="components\EditSupplier.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -123,6 +129,12 @@
     </Compile>
     <Compile Include="components\LICustomer.Designer.cs">
       <DependentUpon>LICustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="components\LIEditPhieuNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\LIEditPhieuNhap.Designer.cs">
+      <DependentUpon>LIEditPhieuNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="components\LIHangView.cs">
       <SubType>UserControl</SubType>
@@ -244,6 +256,9 @@
     <EmbeddedResource Include="components\EditDelop.resx">
       <DependentUpon>EditDelop.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="components\EditPhieuNhap.resx">
+      <DependentUpon>EditPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="components\EditSupplier.resx">
       <DependentUpon>EditSupplier.cs</DependentUpon>
     </EmbeddedResource>
@@ -255,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="components\LICustomer.resx">
       <DependentUpon>LICustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\LIEditPhieuNhap.resx">
+      <DependentUpon>LIEditPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="components\LIHangView.resx">
       <DependentUpon>LIHangView.cs</DependentUpon>
@@ -343,6 +361,8 @@
     <Content Include="res\icon\package-solid.png" />
     <Content Include="res\icon\search-regular-24.png" />
     <Content Include="res\icon\store-alt-regular.png" />
+    <Content Include="res\icon\trash-regular-24.png" />
+    <Content Include="res\icon\trash-regular.png" />
     <Content Include="res\icon\truck-solid-24.png" />
     <Content Include="res\icon\x-circle-regular-60.png" />
     <Content Include="res\icon\x-regular-24.png" />
