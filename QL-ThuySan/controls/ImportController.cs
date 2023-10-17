@@ -157,10 +157,8 @@ namespace QL_ThuySan.controls
         }
         private void SetList()
         {
-            List = root.getContext().PhieuNhaps.ToList();
+            List = root.getContext().PhieuNhaps.OrderByDescending(e => e.Id_pn).ToList();
         }
-
-
 
         protected override void OnResize(System.EventArgs e)
         {
@@ -179,6 +177,11 @@ namespace QL_ThuySan.controls
         private void tSearch_TextChanged(object sender, EventArgs e)
         {
             RenderList(tSearch.Text);
+        }
+
+        private void bAddKH_Click(object sender, EventArgs e)
+        {
+            root.SetMiniControl(new CreatePhieuNhap(root));
         }
     }
 }

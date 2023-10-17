@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QL_ThuySan.models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,41 +11,21 @@ using System.Windows.Forms;
 
 namespace QL_ThuySan.components
 {
-    public partial class LIEditPhieuNhap : UserControl
+    public partial class LICreatePhieuNhap : UserControl
     {
         private FrRoot root;
         private Control ul;
 
         public int gia;
         public int soluong;
-        public int Id = -1;
         public int IdTS = -1;
         public string name;
-        public bool isChange = false;
-        public bool isDelete = false;
-        public bool isNew = false;
-
-        public LIEditPhieuNhap(FrRoot root, Control ul,int Id)
+        public LICreatePhieuNhap(FrRoot root, Control ul)
         {
             this.ul = ul;
-            this.Id = Id;
             this.root = root;
             InitializeComponent();
-        }
-
-        public void ReRender()
-        {
-            if(IdTS != -1)
-            {
-                pAdd.Visible = false;
-                lName.Text = name;
-                tSoLuong.Text = soluong.ToString();
-                tGia.Text = gia.ToString();
-            } else
-            {
-                pAdd.Visible = true;
-                loadListThuySan();
-            }
+            ReRender();
         }
         public void loadListThuySan()
         {
@@ -81,7 +62,7 @@ namespace QL_ThuySan.components
                     {
                         text = item.ten;
                         Minlen = item.ten.ToLower().IndexOf(tName.Text.ToLower());
-                    
+
                     }
                 }
                 tName.Text = text;
@@ -100,64 +81,19 @@ namespace QL_ThuySan.components
             ReRender();
         }
 
-        private void tSoLuong_TextChanged(object sender, EventArgs e)
+        public void ReRender()
         {
-            if (String.IsNullOrWhiteSpace(tSoLuong.Text))
-                return;
-            try
+            if (IdTS != -1)
             {
-                soluong = int.Parse(tSoLuong.Text);
-                isChange = true;
-            } catch
-            {
-                MessageBox.Show("Nhập số");
+                pAdd.Visible = false;
+                lName.Text = name;
+                tSoLuong.Text = soluong.ToString();
+                tGia.Text = gia.ToString();
             }
-        }
-
-        private void tGia_TextChanged(object sender, EventArgs e)
-        {
-            if (String.IsNullOrWhiteSpace(tGia.Text))
-                return;
-            try
+            else
             {
-                gia = int.Parse(tGia.Text);
-                isChange = true;
-            }
-            catch
-            {
-                MessageBox.Show("Nhập số");
-            }
-        }
-
-        
-        public void Save()
-        { 
-            if(isDelete)
-            {
-                var ttn = root.getContext().TTPhieuNhaps.SingleOrDefault(e => e.Id_pn == Id && e.Id_ts == IdTS);
-
-                root.getContext().TTPhieuNhaps.Remove(ttn);
-                return;
-            }
-            if(isNew)
-            {
-                var ttn = new models.TTPhieuNhap
-                {
-                    Id_pn = Id,
-                    Id_ts = IdTS,
-                    so_luong = soluong,
-                    gia_nhap = gia
-                };
-                root.getContext().TTPhieuNhaps.Add(ttn);
-                
-                return;
-            }
-
-            if(isChange)
-            {
-                var ttn = root.getContext().TTPhieuNhaps.SingleOrDefault(e => e.Id_pn == Id && e.Id_ts == IdTS);
-                ttn.so_luong = soluong;
-                ttn.gia_nhap = gia;
+                pAdd.Visible = true;
+                loadListThuySan();
             }
         }
 
@@ -168,7 +104,7 @@ namespace QL_ThuySan.components
 
         private void tName_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 AutoCompleteTS();
             }
@@ -182,31 +118,67 @@ namespace QL_ThuySan.components
         private void bAdd_Click(object sender, EventArgs e)
         {
             var ts = root.getContext().ThuySans.SingleOrDefault(i => i.ten == tName.Text);
-            if(ts != null)
+            if (ts != null)
             {
-                foreach(var item in ul.Controls)
+                foreach (var item in ul.Controls)
                 {
-                    LIEditPhieuNhap temp = (LIEditPhieuNhap)item;
-                    if (temp.name == ts.ten && temp.isDelete == false)
+                    LICreatePhieuNhap temp = (LICreatePhieuNhap)item;
+                    if (temp.name == ts.ten)
                     {
                         MessageBox.Show("Thuy Sản đa tồn tại");
                         return;
-                    }                    
+                    }
                 }
                 RenderById(ts.Id_ts);
-                isNew = true;
-                var newLi = new LIEditPhieuNhap(root, ul, Id);
+                var newLi = new LICreatePhieuNhap(root, ul);
                 newLi.ReRender();
                 ul.Controls.Add(newLi);
                 return;
             }
             MessageBox.Show("Thuy Sản không tồn tại");
         }
+   
+        public TTPhieuNhap GetTTPhieuNhap()
+        {
+            return new TTPhieuNhap
+            { 
+                Id_ts = IdTS,
+                gia_nhap =gia,
+                so_luong = soluong
+            };
+        }
+
+        private void tSoLuong_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(tSoLuong.Text))
+                return;
+            try
+            {
+                soluong = int.Parse(tSoLuong.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Nhap so");
+            }
+        }
+
+        private void tGia_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(tGia.Text))
+                return;
+            try
+            {
+                gia = int.Parse(tGia.Text);          
+            }
+            catch
+            {
+                MessageBox.Show("Nhập số");
+            }
+        }
 
         private void bDelete_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            isDelete = true;
+            ul.Controls.Remove(this);
         }
     }
 }

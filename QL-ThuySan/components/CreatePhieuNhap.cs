@@ -10,18 +10,19 @@ using System.Windows.Forms;
 
 namespace QL_ThuySan.components
 {
-    public partial class EditPhieuNhap : UserControl 
+    public partial class CreatePhieuNhap : UserControl
     {
         private FrRoot root;
-        private int Id;
-        public EditPhieuNhap(FrRoot root, int Id)
+        public CreatePhieuNhap(FrRoot root)
         {
             this.root = root;
-            this.Id = Id;
             InitializeComponent();
-            
-            ReLoad();
+
             LoadTextBox();
+            LoadKho();
+
+            var li = new LICreatePhieuNhap(root, fListHang);
+            fListHang.Controls.Add(li);
         }
 
         private void LoadTextBox()
@@ -30,14 +31,14 @@ namespace QL_ThuySan.components
 
             var ncp = root.getContext().NhaCungCaps.ToList();
 
-            foreach(var item in ncp)
+            foreach (var item in ncp)
             {
                 autotext.Add(item.ten_ncp);
 
             }
             tNCP.AutoCompleteMode = AutoCompleteMode.Suggest;
             tNCP.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            tNCP.AutoCompleteCustomSource = autotext;   
+            tNCP.AutoCompleteCustomSource = autotext;
         }
 
         private void LoadKho()
@@ -46,60 +47,10 @@ namespace QL_ThuySan.components
 
             var kho = root.getContext().Khoes.ToList();
 
-            foreach(var item in kho)
+            foreach (var item in kho)
             {
                 cKho.Items.Add(item.ten_kho);
             }
-        }
-
-        private void ReLoad()
-        {
-            LoadKho();
-
-            var pn =  root.getContext().PhieuNhaps.Find(Id);
-
-            tNCP.Text = pn.NhaCungCap.ten_ncp;
-            lId.Text = pn.Id_pn.ToString();
-
-            for(int i = 0; i < cKho.Items.Count; i++)
-            {
-                if(cKho.Items[i].ToString() == pn.Kho.ten_kho)
-                {
-                    cKho.SelectedIndex = i;
-                    break;
-                }
-            } 
-
-            foreach(var item in pn.TTPhieuNhaps)
-            {
-                LIEditPhieuNhap li = new LIEditPhieuNhap(root, fListHang, Id)
-                {
-                    IdTS = item.Id_ts,
-                    name = item.ThuySan.ten,
-                    gia = (int)item.gia_nhap,
-                    soluong = item.so_luong
-                };
-                li.ReRender();
-                fListHang.Controls.Add(li);
-            }
-            AddNewLI();
-        }
-
-        public void AddNewLI()
-        {
-            LIEditPhieuNhap li = new LIEditPhieuNhap(root, fListHang, Id);
-            li.ReRender();
-            fListHang.Controls.Add(li);
-        }
-
-        private void bThem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        public Control GetULitem()
-        {
-            return fListHang;
         }
 
         private void tNCP_TextChanged(object sender, EventArgs e)
@@ -136,9 +87,18 @@ namespace QL_ThuySan.components
             tNCP.Text = ncp[0].ten_ncp;
         }
 
-        private void tNCP_Leave(object sender, EventArgs ev)
+        private void tNCP_Leave(object sender, EventArgs e)
         {
             AutoCompleteTNCP();
+        }
+
+        private void tNCP_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                AutoCompleteTNCP();
+                tNCP.SelectionStart = tNCP.Text.Length;
+            }
         }
 
         private void panel1_Click(object sender, EventArgs e)
@@ -148,38 +108,36 @@ namespace QL_ThuySan.components
             tNCP.SelectionLength = 0;
         }
 
-        private void tNCP_KeyDown(object sender, KeyEventArgs e)
-        {
-            if(e.KeyCode == Keys.Enter)
-            {
-                AutoCompleteTNCP();
-                tNCP.SelectionStart = tNCP.Text.Length;
-
-            }
-        }
-
         private void bSave_Click(object sender, EventArgs ev)
         {
+            if (String.IsNullOrWhiteSpace(tNCP.Text) || cKho.SelectedItem == null)
+                return;
+
             var ncp = root.getContext().NhaCungCaps.SingleOrDefault(e => e.ten_ncp == tNCP.Text);
             var kho = root.getContext().Khoes.SingleOrDefault(e => e.ten_kho == cKho.SelectedItem.ToString());
 
             if (ncp == null || kho == null)
                 return;
 
-            var pn = root.getContext().PhieuNhaps.Find(Id);
-
-            pn.id_ncp = ncp.Id_ncp;
-            pn.id_kho = kho.Id_kho;
+            var newPn = new models.PhieuNhap
+            {
+                id_kho = kho.Id_kho,
+                id_ncp = ncp.Id_ncp,
+                ngay_nhap = DateTime.Now,
+                da_nhap = false
+            };
 
             foreach (var item in fListHang.Controls)
             {
-                LIEditPhieuNhap li = (LIEditPhieuNhap)item;
-                li.Save();
+                LICreatePhieuNhap li = (LICreatePhieuNhap)item;
+                if(li.IdTS != -1)
+                    newPn.TTPhieuNhaps.Add(li.GetTTPhieuNhap());
             }
 
-
+            root.getContext().PhieuNhaps.Add(newPn);
 
             root.getContext().SaveChanges();
+
             root.GetImportController().ReLoad();
             root.MiniControlClose();
         }

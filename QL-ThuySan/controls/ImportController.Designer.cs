@@ -86,6 +86,7 @@ namespace QL_ThuySan.controls
             this.bAddKH.TabIndex = 1;
             this.bAddKH.Text = "Thêm đơn nhập";
             this.bAddKH.UseVisualStyleBackColor = false;
+            this.bAddKH.Click += new System.EventHandler(this.bAddKH_Click);
             // 
             // label1
             // 

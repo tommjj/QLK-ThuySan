@@ -76,6 +76,12 @@
     <Compile Include="components\CreateCustomer.Designer.cs">
       <DependentUpon>CreateCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="components\CreatePhieuNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\CreatePhieuNhap.Designer.cs">
+      <DependentUpon>CreatePhieuNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="components\CreateSupplier.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -123,6 +129,12 @@
     </Compile>
     <Compile Include="components\ImportView.Designer.cs">
       <DependentUpon>ImportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="components\LICreatePhieuNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\LICreatePhieuNhap.Designer.cs">
+      <DependentUpon>LICreatePhieuNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="components\LICustomer.cs">
       <SubType>UserControl</SubType>
@@ -244,6 +256,9 @@
     <EmbeddedResource Include="components\CreateCustomer.resx">
       <DependentUpon>CreateCustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="components\CreatePhieuNhap.resx">
+      <DependentUpon>CreatePhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="components\CreateSupplier.resx">
       <DependentUpon>CreateSupplier.cs</DependentUpon>
     </EmbeddedResource>
@@ -267,6 +282,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="components\ImportView.resx">
       <DependentUpon>ImportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\LICreatePhieuNhap.resx">
+      <DependentUpon>LICreatePhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="components\LICustomer.resx">
       <DependentUpon>LICustomer.cs</DependentUpon>
