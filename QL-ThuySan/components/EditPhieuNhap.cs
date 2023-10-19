@@ -177,8 +177,6 @@ namespace QL_ThuySan.components
                 li.Save();
             }
 
-
-
             root.getContext().SaveChanges();
             root.GetImportController().ReLoad();
             root.MiniControlClose();

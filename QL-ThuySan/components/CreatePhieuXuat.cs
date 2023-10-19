@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace QL_ThuySan.components
 {
-    public partial class CreatePhieuNhap : UserControl
+    public partial class CreatePhieuXuat : UserControl
     {
         private FrRoot root;
-        public CreatePhieuNhap(FrRoot root)
+        public CreatePhieuXuat(FrRoot root)
         {
             this.root = root;
             InitializeComponent();
@@ -21,7 +21,7 @@ namespace QL_ThuySan.components
             LoadTextBox();
             LoadKho();
 
-            var li = new LICreatePhieuNhap(root, fListHang);
+            var li = new LICreatePhieuXuat(root, fListHang);
             fListHang.Controls.Add(li);
         }
 
@@ -29,16 +29,16 @@ namespace QL_ThuySan.components
         {
             AutoCompleteStringCollection autotext = new AutoCompleteStringCollection();
 
-            var ncp = root.getContext().NhaCungCaps.ToList();
+            var ncp = root.getContext().KhachHangs.ToList();
 
             foreach (var item in ncp)
             {
-                autotext.Add(item.ten_ncp);
+                autotext.Add(item.ten_kh);
 
             }
-            tNCP.AutoCompleteMode = AutoCompleteMode.Suggest;
-            tNCP.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            tNCP.AutoCompleteCustomSource = autotext;
+            tKH.AutoCompleteMode = AutoCompleteMode.Suggest;
+            tKH.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            tKH.AutoCompleteCustomSource = autotext;
         }
 
         private void LoadKho()
@@ -55,16 +55,16 @@ namespace QL_ThuySan.components
 
         private void tNCP_TextChanged(object sender, EventArgs e)
         {
-            tNCP.ForeColor = Color.Black;
+            tKH.ForeColor = Color.Black;
         }
 
-        private void AutoCompleteTNCP()
+        private void AutoCompleteKH()
         {
-            var ncp = root.getContext().NhaCungCaps.Where(e => e.ten_ncp.ToLower().Contains(tNCP.Text.ToLower())).ToList();
+            var ncp = root.getContext().KhachHangs.Where(e => e.ten_kh.ToLower().Contains(tKH.Text.ToLower())).ToList();
 
             if (ncp.Count == 0)
             {
-                tNCP.ForeColor = Color.Red;
+                tKH.ForeColor = Color.Red;
                 return;
             }
 
@@ -74,90 +74,83 @@ namespace QL_ThuySan.components
                 int Minlen = 9999;
                 foreach (var item in ncp)
                 {
-                    if (item.ten_ncp.ToLower().IndexOf(tNCP.Text.ToLower()) < Minlen)
+                    if (item.ten_kh.ToLower().IndexOf(tKH.Text.ToLower()) < Minlen)
                     {
-                        text = item.ten_ncp;
-                        Minlen = item.ten_ncp.ToLower().IndexOf(tNCP.Text.ToLower());
+                        text = item.ten_kh;
+                        Minlen = item.ten_kh.ToLower().IndexOf(tKH.Text.ToLower());
                     }
                 }
-                tNCP.Text = text;
+                tKH.Text = text;
                 return;
             }
 
-            tNCP.Text = ncp[0].ten_ncp;
+            tKH.Text = ncp[0].ten_kh;
         }
 
-        private void tNCP_Leave(object sender, EventArgs e)
+        private void tKH_Leave(object sender, EventArgs e)
         {
-            AutoCompleteTNCP();
+            AutoCompleteKH();
         }
 
-        private void tNCP_KeyDown(object sender, KeyEventArgs e)
+        private void tKH_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                AutoCompleteTNCP();
-                tNCP.SelectionStart = tNCP.Text.Length;
+                AutoCompleteKH();
+                tKH.SelectionStart = tKH.Text.Length;
             }
         }
 
         private void panel1_Click(object sender, EventArgs e)
         {
             this.ActiveControl = null;
-            tNCP.SelectionStart = tNCP.Text.Length;
-            tNCP.SelectionLength = 0;
+            tKH.SelectionStart = tKH.Text.Length;
+            tKH.SelectionLength = 0;
         }
 
         private int Save()
         {
-            if (String.IsNullOrWhiteSpace(tNCP.Text) || cKho.SelectedItem == null)
+            if (String.IsNullOrWhiteSpace(tKH.Text) || cKho.SelectedItem == null)
                 return -1;
 
-            var ncp = root.getContext().NhaCungCaps.SingleOrDefault(e => e.ten_ncp == tNCP.Text);
+            var kh = root.getContext().KhachHangs.SingleOrDefault(e => e.ten_kh == tKH.Text);
             var kho = root.getContext().Khoes.SingleOrDefault(e => e.ten_kho == cKho.SelectedItem.ToString());
 
-            if (ncp == null || kho == null)
+            if (kh == null || kho == null)
                 return -1;
 
-            var newPn = new models.PhieuNhap
+            var newPx = new models.PhieuXuat
             {
-                id_kho = kho.Id_kho,
-                id_ncp = ncp.Id_ncp,
-                ngay_nhap = DateTime.Now,
-                da_nhap = false
+                Id_kho = kho.Id_kho,
+                id_kh = kh.Id_kh,
+                ngay_xuat = DateTime.Now,
+                da_xuat = false
             };
 
             foreach (var item in fListHang.Controls)
             {
-                LICreatePhieuNhap li = (LICreatePhieuNhap)item;
+                LICreatePhieuXuat li = (LICreatePhieuXuat)item;
                 if (li.IdTS != -1 && li.soluong > 0)
-                    newPn.TTPhieuNhaps.Add(li.GetTTPhieuNhap());
+                    newPx.TTPhieuXuats.Add(li.GetTTPhieuXuat());
             }
 
-            root.getContext().PhieuNhaps.Add(newPn);
+            root.getContext().PhieuXuats.Add(newPx);
 
-            try
-            {
-                root.getContext().SaveChanges();
-            } catch(Exception ex)
-            {
-                root.Rollback();
-            }
-            
+            root.getContext().SaveChanges();
 
-            return newPn.Id_pn;
+            return newPx.Id_px;
         }
         private void bSave_Click(object sender, EventArgs ev)
         {
             Save();
-            root.GetImportController().ReLoad();
+            root.GetExportController().ReLoad();
             root.MiniControlClose();
         }
 
         private void bSaveAndPush_Click(object sender, EventArgs e)
         {
             int Id = Save();
-            root.GetImportController().NhapKho(Id);
+            //root.GetImportController().NhapKho(Id);
         }
     }
 }

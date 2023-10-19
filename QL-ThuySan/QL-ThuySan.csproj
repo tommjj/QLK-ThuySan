@@ -76,6 +76,12 @@
     <Compile Include="components\CreateCustomer.Designer.cs">
       <DependentUpon>CreateCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="components\CreatePhieuXuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\CreatePhieuXuat.Designer.cs">
+      <DependentUpon>CreatePhieuXuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="components\CreatePhieuNhap.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -112,6 +118,12 @@
     <Compile Include="components\EditPhieuNhap.Designer.cs">
       <DependentUpon>EditPhieuNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="components\EditPhieuXuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\EditPhieuXuat.Designer.cs">
+      <DependentUpon>EditPhieuXuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="components\EditSupplier.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -124,11 +136,23 @@
     <Compile Include="components\EditThuySan.Designer.cs">
       <DependentUpon>EditThuySan.cs</DependentUpon>
     </Compile>
+    <Compile Include="components\ExportView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\ExportView.Designer.cs">
+      <DependentUpon>ExportView.cs</DependentUpon>
+    </Compile>
     <Compile Include="components\ImportView.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="components\ImportView.Designer.cs">
       <DependentUpon>ImportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="components\LICreatePhieuXuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\LICreatePhieuXuat.Designer.cs">
+      <DependentUpon>LICreatePhieuXuat.cs</DependentUpon>
     </Compile>
     <Compile Include="components\LICreatePhieuNhap.cs">
       <SubType>UserControl</SubType>
@@ -142,11 +166,23 @@
     <Compile Include="components\LICustomer.Designer.cs">
       <DependentUpon>LICustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="components\LIEditPhieuXuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\LIEditPhieuXuat.Designer.cs">
+      <DependentUpon>LIEditPhieuXuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="components\LIEditPhieuNhap.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="components\LIEditPhieuNhap.Designer.cs">
       <DependentUpon>LIEditPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="components\LIexport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\LIexport.Designer.cs">
+      <DependentUpon>LIexport.cs</DependentUpon>
     </Compile>
     <Compile Include="components\LIHangView.cs">
       <SubType>UserControl</SubType>
@@ -256,6 +292,9 @@
     <EmbeddedResource Include="components\CreateCustomer.resx">
       <DependentUpon>CreateCustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="components\CreatePhieuXuat.resx">
+      <DependentUpon>CreatePhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="components\CreatePhieuNhap.resx">
       <DependentUpon>CreatePhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -274,14 +313,23 @@
     <EmbeddedResource Include="components\EditPhieuNhap.resx">
       <DependentUpon>EditPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="components\EditPhieuXuat.resx">
+      <DependentUpon>EditPhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="components\EditSupplier.resx">
       <DependentUpon>EditSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="components\EditThuySan.resx">
       <DependentUpon>EditThuySan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="components\ExportView.resx">
+      <DependentUpon>ExportView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="components\ImportView.resx">
       <DependentUpon>ImportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\LICreatePhieuXuat.resx">
+      <DependentUpon>LICreatePhieuXuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="components\LICreatePhieuNhap.resx">
       <DependentUpon>LICreatePhieuNhap.cs</DependentUpon>
@@ -289,8 +337,14 @@
     <EmbeddedResource Include="components\LICustomer.resx">
       <DependentUpon>LICustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="components\LIEditPhieuXuat.resx">
+      <DependentUpon>LIEditPhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="components\LIEditPhieuNhap.resx">
       <DependentUpon>LIEditPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\LIexport.resx">
+      <DependentUpon>LIexport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="components\LIHangView.resx">
       <DependentUpon>LIHangView.cs</DependentUpon>
@@ -376,6 +430,7 @@
     <Content Include="res\icon\impor-regular-24.png" />
     <Content Include="res\icon\import.png" />
     <Content Include="res\icon\log-out-circle-regular-24.png" />
+    <Content Include="res\icon\log-out-regular-24.png" />
     <Content Include="res\icon\package-solid.png" />
     <Content Include="res\icon\search-regular-24.png" />
     <Content Include="res\icon\store-alt-regular.png" />

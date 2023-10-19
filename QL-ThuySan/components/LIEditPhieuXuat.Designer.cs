@@ -1,7 +1,7 @@
 ﻿
 namespace QL_ThuySan.components
 {
-    partial class LIEditPhieuNhap
+    partial class LIEditPhieuXuat
     {
         /// <summary> 
         /// Required designer variable.

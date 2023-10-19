@@ -10,18 +10,17 @@ using System.Windows.Forms;
 
 namespace QL_ThuySan.components
 {
-    public partial class ImportView : UserControl
+    public partial class ExportView : UserControl
     {
         private FrRoot root;
         private int Id;
-
-        public ImportView(FrRoot root)
+        public ExportView(FrRoot root)
         {
             this.root = root;
             InitializeComponent();
         }
 
-        private int SumQuantity(List<models.TTPhieuNhap> item)
+        private int SumQuantity(List<models.TTPhieuXuat> item)
         {
             int sum = 0;
             foreach (var i in item)
@@ -31,15 +30,16 @@ namespace QL_ThuySan.components
             return sum;
         }
 
-        private int SumPrice(List<models.TTPhieuNhap> item)
+        private int SumPrice(List<models.TTPhieuXuat> item)
         {
             int sum = 0;
             foreach (var i in item)
             {
-                sum += i.so_luong * (int)i.gia_nhap;
+                sum += i.so_luong * (int)i.gia_xuat;
             }
             return sum;
         }
+
         public void SetId(int Id)
         {
             if (Id == -1)
@@ -55,32 +55,33 @@ namespace QL_ThuySan.components
 
             this.Id = Id;
 
-            var pn = root.getContext().PhieuNhaps.Find(Id);
+            var px = root.getContext().PhieuXuats.Find(Id);
 
-            lKho.Text = pn.Kho.ten_kho;
+            lKho.Text = px.Kho.ten_kho;
             lSoPhieu.Text = Id.ToString();
-            lName.Text = pn.NhaCungCap.ten_ncp;
+            lName.Text = px.KhachHang.ten_kh;
 
-            lGia.Text = SumPrice(pn.TTPhieuNhaps.ToList()).ToString();
-            lSoluong.Text = SumQuantity(pn.TTPhieuNhaps.ToList()).ToString();
+            lGia.Text = SumPrice(px.TTPhieuXuats.ToList()).ToString();
+            lSoluong.Text = SumQuantity(px.TTPhieuXuats.ToList()).ToString();
 
-            if(pn.da_nhap)
+            if (px.da_xuat)
             {
-                lNgayNhap.Text = pn.ngay_nhap.ToString();
+                lNgayNhap.Text = px.ngay_xuat.ToString();
                 bEdit.Visible = false;
-            } else
+            }
+            else
             {
                 lNgayNhap.Text = "none";
                 bEdit.Visible = true;
             }
 
             fHang.Controls.Clear();
-            foreach(var item in pn.TTPhieuNhaps)
+            foreach (var item in px.TTPhieuXuats)
             {
                 LIHangView temp = new LIHangView();
                 temp.name = item.ThuySan.ten;
                 temp.soluong = item.so_luong;
-                temp.gia = item.gia_nhap;
+                temp.gia = item.gia_xuat;
 
                 temp.Render();
 
@@ -88,9 +89,9 @@ namespace QL_ThuySan.components
             }
         }
 
-        public void Render()
+        private void bEdit_Click(object sender, EventArgs e)
         {
-           
+            root.SetMiniControl(new EditPhieuXuat(root, Id));
         }
 
         private void bDelete_Click(object sender, EventArgs ev)
@@ -98,18 +99,13 @@ namespace QL_ThuySan.components
             DialogResult dialogResult = MessageBox.Show("Bạn có muốn xoá?", "delete", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                var pn = root.getContext().PhieuNhaps.Find(Id);
-                var ttpn = root.getContext().TTPhieuNhaps.Where(e => e.Id_pn == Id);
-                root.getContext().TTPhieuNhaps.RemoveRange(ttpn);
-                root.getContext().PhieuNhaps.Remove(pn);
+                var px = root.getContext().PhieuXuats.Find(Id);
+                var ttpx = root.getContext().TTPhieuXuats.Where(e => e.Id_px == Id);
+                root.getContext().TTPhieuXuats.RemoveRange(ttpx);
+                root.getContext().PhieuXuats.Remove(px);
                 root.getContext().SaveChanges();
-                root.GetImportController().ReLoad();
-            }            
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            root.SetMiniControl(new EditPhieuNhap(root, Id));
+                root.GetExportController().ReLoad();
+            }
         }
     }
 }

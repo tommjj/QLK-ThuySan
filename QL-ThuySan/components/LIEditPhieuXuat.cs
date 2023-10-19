@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace QL_ThuySan.components
 {
-    public partial class LIEditPhieuNhap : UserControl
+    public partial class LIEditPhieuXuat : UserControl
     {
         private FrRoot root;
         private Control ul;
@@ -24,7 +24,7 @@ namespace QL_ThuySan.components
         public bool isDelete = false;
         public bool isNew = false;
 
-        public LIEditPhieuNhap(FrRoot root, Control ul,int Id)
+        public LIEditPhieuXuat(FrRoot root, Control ul,int Id)
         {
             this.ul = ul;
             this.Id = Id;
@@ -95,7 +95,7 @@ namespace QL_ThuySan.components
             this.IdTS = ts.Id_ts;
             name = ts.ten;
             soluong = 0;
-            gia = 0;
+            gia = (int)ts.gia_ban;
 
             ReRender();
         }
@@ -129,28 +129,27 @@ namespace QL_ThuySan.components
             }
         }
 
-        
         public void Save()
         { 
             if(isDelete)
             {
-                var ttn = root.getContext().TTPhieuNhaps.SingleOrDefault(e => e.Id_pn == Id && e.Id_ts == IdTS);
+                var ttx = root.getContext().TTPhieuXuats.SingleOrDefault(e => e.Id_px == Id && e.Id_ts == IdTS);
 
-                root.getContext().TTPhieuNhaps.Remove(ttn);
+                root.getContext().TTPhieuXuats.Remove(ttx);
                 return;
             }
             if(isNew)
             {
                 if (soluong < 1)
                     return;
-                var ttn = new models.TTPhieuNhap
+                var ttx = new models.TTPhieuXuat
                 {
-                    Id_pn = Id,
+                    Id_px = Id,
                     Id_ts = IdTS,
                     so_luong = soluong,
-                    gia_nhap = gia
+                    gia_xuat = gia
                 };
-                root.getContext().TTPhieuNhaps.Add(ttn);
+                root.getContext().TTPhieuXuats.Add(ttx);
                 
                 return;
             }
@@ -158,10 +157,16 @@ namespace QL_ThuySan.components
             if(isChange)
             {
                 if (soluong < 1)
+                {
+                    var ttxd = root.getContext().TTPhieuXuats.SingleOrDefault(e => e.Id_px == Id && e.Id_ts == IdTS);
+
+                    root.getContext().TTPhieuXuats.Remove(ttxd);
                     return;
-                var ttn = root.getContext().TTPhieuNhaps.SingleOrDefault(e => e.Id_pn == Id && e.Id_ts == IdTS);
-                ttn.so_luong = soluong;
-                ttn.gia_nhap = gia;
+                }
+                   
+                var ttx = root.getContext().TTPhieuXuats.SingleOrDefault(e => e.Id_px == Id && e.Id_ts == IdTS);
+                ttx.so_luong = soluong;
+                ttx.gia_xuat = gia;
             }
         }
 
@@ -190,7 +195,7 @@ namespace QL_ThuySan.components
             {
                 foreach(var item in ul.Controls)
                 {
-                    LIEditPhieuNhap temp = (LIEditPhieuNhap)item;
+                    LIEditPhieuXuat temp = (LIEditPhieuXuat)item;
                     if (temp.name == ts.ten && temp.isDelete == false)
                     {
                         MessageBox.Show("Thuy Sản đa tồn tại");
@@ -199,7 +204,7 @@ namespace QL_ThuySan.components
                 }
                 RenderById(ts.Id_ts);
                 isNew = true;
-                var newLi = new LIEditPhieuNhap(root, ul, Id);
+                var newLi = new LIEditPhieuXuat(root, ul, Id);
                 newLi.ReRender();
                 ul.Controls.Add(newLi);
                 return;

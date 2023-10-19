@@ -96,6 +96,12 @@ namespace QL_ThuySan
             return context;
         }
 
+        public void Rollback()
+        {
+            context.Dispose();
+            context = new Models();
+        }
+
         public int getUserId()
         {
             return userId;
@@ -212,6 +218,7 @@ namespace QL_ThuySan
                     break;
                 case Pages.EXPORT_PAGE:
                     SetMainControl(exportController);
+                    exportController.ReLoad();
                     break;
                 case Pages.IMPORT_PAGE:
                     SetMainControl(importController);

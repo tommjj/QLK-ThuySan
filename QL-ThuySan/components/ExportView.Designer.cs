@@ -1,7 +1,7 @@
 ﻿
 namespace QL_ThuySan.components
 {
-    partial class ImportView
+    partial class ExportView
     {
         /// <summary> 
         /// Required designer variable.
@@ -75,7 +75,7 @@ namespace QL_ThuySan.components
             this.pMain.Location = new System.Drawing.Point(0, 0);
             this.pMain.Name = "pMain";
             this.pMain.Size = new System.Drawing.Size(360, 728);
-            this.pMain.TabIndex = 4;
+            this.pMain.TabIndex = 5;
             // 
             // panel1
             // 
@@ -116,9 +116,9 @@ namespace QL_ThuySan.components
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(15, 235);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(95, 20);
+            this.label11.Size = new System.Drawing.Size(90, 20);
             this.label11.TabIndex = 7;
-            this.label11.Text = "Hàng nhập:";
+            this.label11.Text = "Hàng xuất:";
             // 
             // lNgayNhap
             // 
@@ -164,7 +164,7 @@ namespace QL_ThuySan.components
             // 
             this.lName.AutoSize = true;
             this.lName.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lName.Location = new System.Drawing.Point(48, 72);
+            this.lName.Location = new System.Drawing.Point(118, 72);
             this.lName.Name = "lName";
             this.lName.Size = new System.Drawing.Size(42, 25);
             this.lName.TabIndex = 6;
@@ -185,9 +185,9 @@ namespace QL_ThuySan.components
             this.label7.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(3, 4);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(165, 38);
+            this.label7.Size = new System.Drawing.Size(157, 38);
             this.label7.TabIndex = 4;
-            this.label7.Text = "Phiếu nhập";
+            this.label7.Text = "Phiếu xuất";
             // 
             // bEdit
             // 
@@ -204,7 +204,7 @@ namespace QL_ThuySan.components
             this.bEdit.TabIndex = 3;
             this.bEdit.Text = "chỉnh sửa";
             this.bEdit.UseVisualStyleBackColor = false;
-            this.bEdit.Click += new System.EventHandler(this.button1_Click);
+            this.bEdit.Click += new System.EventHandler(this.bEdit_Click);
             // 
             // bDelete
             // 
@@ -228,9 +228,9 @@ namespace QL_ThuySan.components
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(10, 187);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 25);
+            this.label5.Size = new System.Drawing.Size(101, 25);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Ngày nhập:";
+            this.label5.Text = "Ngày xuất:";
             // 
             // label9
             // 
@@ -268,9 +268,9 @@ namespace QL_ThuySan.components
             this.lfrom.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lfrom.Location = new System.Drawing.Point(10, 69);
             this.lfrom.Name = "lfrom";
-            this.lfrom.Size = new System.Drawing.Size(43, 28);
+            this.lfrom.Size = new System.Drawing.Size(112, 28);
             this.lfrom.TabIndex = 0;
-            this.lfrom.Text = "Từ: ";
+            this.lfrom.Text = "Khác hàng: ";
             // 
             // tAddress
             // 
@@ -361,12 +361,12 @@ namespace QL_ThuySan.components
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên nhà cung cấp:";
             // 
-            // ImportView
+            // ExportView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pMain);
-            this.Name = "ImportView";
+            this.Name = "ExportView";
             this.Size = new System.Drawing.Size(360, 728);
             this.pMain.ResumeLayout(false);
             this.pMain.PerformLayout();
@@ -380,10 +380,21 @@ namespace QL_ThuySan.components
 
         private System.Windows.Forms.Panel pMain;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.FlowLayoutPanel fHang;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lNgayNhap;
+        private System.Windows.Forms.Label lGia;
+        private System.Windows.Forms.Label lKho;
+        private System.Windows.Forms.Label lSoluong;
         private System.Windows.Forms.Label lName;
         private System.Windows.Forms.Label lSoPhieu;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button bEdit;
         private System.Windows.Forms.Button bDelete;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lfrom;
         private System.Windows.Forms.RichTextBox tAddress;
         private System.Windows.Forms.Label label4;
@@ -393,16 +404,5 @@ namespace QL_ThuySan.components
         private System.Windows.Forms.Button bSave;
         private System.Windows.Forms.TextBox tSDT;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.FlowLayoutPanel fHang;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label lGia;
-        private System.Windows.Forms.Label lSoluong;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lNgayNhap;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button bEdit;
-        private System.Windows.Forms.Label lKho;
-        private System.Windows.Forms.Label label8;
     }
 }

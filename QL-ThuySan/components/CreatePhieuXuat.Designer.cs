@@ -1,7 +1,7 @@
 ﻿
 namespace QL_ThuySan.components
 {
-    partial class CreatePhieuNhap
+    partial class CreatePhieuXuat
     {
         /// <summary> 
         /// Required designer variable.
@@ -35,7 +35,7 @@ namespace QL_ThuySan.components
             this.bThem = new System.Windows.Forms.Button();
             this.fListHang = new System.Windows.Forms.FlowLayoutPanel();
             this.cKho = new System.Windows.Forms.ComboBox();
-            this.tNCP = new System.Windows.Forms.TextBox();
+            this.tKH = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@ namespace QL_ThuySan.components
             this.panel1.Controls.Add(this.bThem);
             this.panel1.Controls.Add(this.fListHang);
             this.panel1.Controls.Add(this.cKho);
-            this.panel1.Controls.Add(this.tNCP);
+            this.panel1.Controls.Add(this.tKH);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label3);
@@ -72,7 +72,7 @@ namespace QL_ThuySan.components
             this.bSaveAndPush.Name = "bSaveAndPush";
             this.bSaveAndPush.Size = new System.Drawing.Size(150, 48);
             this.bSaveAndPush.TabIndex = 7;
-            this.bSaveAndPush.Text = "Thêm và nhập";
+            this.bSaveAndPush.Text = "Thêm và xuất";
             this.bSaveAndPush.UseVisualStyleBackColor = false;
             this.bSaveAndPush.Click += new System.EventHandler(this.bSaveAndPush_Click);
             // 
@@ -118,16 +118,16 @@ namespace QL_ThuySan.components
             this.cKho.Size = new System.Drawing.Size(137, 39);
             this.cKho.TabIndex = 4;
             // 
-            // tNCP
+            // tKH
             // 
-            this.tNCP.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tNCP.Location = new System.Drawing.Point(16, 103);
-            this.tNCP.Name = "tNCP";
-            this.tNCP.Size = new System.Drawing.Size(396, 38);
-            this.tNCP.TabIndex = 3;
-            this.tNCP.TextChanged += new System.EventHandler(this.tNCP_TextChanged);
-            this.tNCP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tNCP_KeyDown);
-            this.tNCP.Leave += new System.EventHandler(this.tNCP_Leave);
+            this.tKH.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tKH.Location = new System.Drawing.Point(16, 103);
+            this.tKH.Name = "tKH";
+            this.tKH.Size = new System.Drawing.Size(396, 38);
+            this.tKH.TabIndex = 3;
+            this.tKH.TextChanged += new System.EventHandler(this.tNCP_TextChanged);
+            this.tKH.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tKH_KeyDown);
+            this.tKH.Leave += new System.EventHandler(this.tKH_Leave);
             // 
             // label4
             // 
@@ -145,9 +145,9 @@ namespace QL_ThuySan.components
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(12, 172);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 23);
+            this.label5.Size = new System.Drawing.Size(93, 23);
             this.label5.TabIndex = 2;
-            this.label5.Text = "Hàng nhập:";
+            this.label5.Text = "Hàng xuất:";
             // 
             // label3
             // 
@@ -155,9 +155,9 @@ namespace QL_ThuySan.components
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(12, 76);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 23);
+            this.label3.Size = new System.Drawing.Size(105, 23);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Nhà cung cấp:";
+            this.label3.Text = "Khách hàng:";
             // 
             // label1
             // 
@@ -165,17 +165,17 @@ namespace QL_ThuySan.components
             this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(4, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(262, 45);
+            this.label1.Size = new System.Drawing.Size(253, 45);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Sửa phiếu nhập";
+            this.label1.Text = "Sửa phiếu xuất";
             // 
-            // CreatePhieuNhap
+            // CreatePhieuXuat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel1);
-            this.Name = "CreatePhieuNhap";
+            this.Name = "CreatePhieuXuat";
             this.Size = new System.Drawing.Size(573, 646);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -191,7 +191,7 @@ namespace QL_ThuySan.components
         private System.Windows.Forms.Button bThem;
         private System.Windows.Forms.FlowLayoutPanel fListHang;
         private System.Windows.Forms.ComboBox cKho;
-        private System.Windows.Forms.TextBox tNCP;
+        private System.Windows.Forms.TextBox tKH;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;

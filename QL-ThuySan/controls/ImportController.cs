@@ -40,6 +40,45 @@ namespace QL_ThuySan.controls
             importView.SetId(-1);
         }
 
+        public bool NhapKho(int id)
+        {
+            var pn = root.getContext().PhieuNhaps.Find(id);
+            if (pn == null)
+                return false;
+            if (pn.da_nhap)
+                return false;
+            pn.ngay_nhap = DateTime.Now;
+            pn.da_nhap = true;
+
+            var ttpn = pn.TTPhieuNhaps.ToList();
+
+            foreach(var item in ttpn)
+            {
+                var tonkho = root.getContext().TonKhoes.SingleOrDefault(e => e.id_ts == item.Id_ts && e.Id_kho == pn.id_kho);
+                if(tonkho == null)
+                {
+                    var newTK = new models.TonKho { 
+                        id_ts = item.Id_ts,
+                        Id_kho = pn.id_kho,
+                        so_luong = item.so_luong
+                    };
+                    root.getContext().TonKhoes.Add(newTK);
+
+                    continue;
+                }
+                tonkho.so_luong += item.so_luong;
+            }
+            try
+            {
+                root.getContext().SaveChanges();
+                return true;
+            } catch (Exception ex)
+            {
+                root.Rollback();
+                return false;
+            }
+        }
+
         private int SumQuantity(List<models.TTPhieuNhap> item)
         {
             int sum = 0;
