@@ -40,15 +40,17 @@ namespace QL_ThuySan.components
             exportController.SetId(Id);
         }
 
-        private void bImport_Click(object sender, EventArgs e)
-        {
-            //importController.NhapKho(Id);
-            //importController.ReLoad();
-        }
-
         private void bImport_Click_1(object sender, EventArgs e)
         {
-
+            try
+            {
+                exportController.xuatKho(Id);
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+            exportController.ReLoad();
         }
     }
 }

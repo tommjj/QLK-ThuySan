@@ -18,6 +18,12 @@ namespace QL_ThuySan.controls
         private ExportView exportView;
 
         private List<models.PhieuXuat> List;
+
+        private int PageSize = 30;
+
+        private int PageNumber;
+
+        private bool isSeachMode = false;
         public ExportController(FrRoot root)
         {
             this.root = root;
@@ -25,13 +31,57 @@ namespace QL_ThuySan.controls
             InitializeComponent();
 
             exportView = new ExportView(root);
-            exportView.SetId(-1);
+            exportView.SetId(-1); 
             pEditKHControl.Controls.Add(exportView);
         }
         private void init()
         {
 
         }
+        public bool xuatKho(int id)
+        {
+            var px = root.getContext().PhieuXuats.Find(id);
+            if (px == null)
+                return false;
+            if (px.da_xuat)
+                return false;
+
+            var ttpx = px.TTPhieuXuats.ToList();
+
+            foreach (var item in ttpx)
+            {
+                var tonkho = root.getContext().TonKhoes.SingleOrDefault(e => e.id_ts == item.Id_ts && e.Id_kho == px.Id_kho);
+                if (tonkho == null)
+                {
+                    root.Rollback();
+                    throw new Exception("khong du hang");
+                }
+                if(tonkho.so_luong - item.so_luong < 0)
+                {
+                    root.Rollback();
+                    throw new Exception("khong du hang");
+                }
+                if(tonkho.so_luong - item.so_luong == 0)
+                {
+                    root.getContext().TonKhoes.Remove(tonkho);
+                    continue;
+                }
+                tonkho.so_luong -= item.so_luong;
+            }
+
+            px.ngay_xuat = DateTime.Now;
+            px.da_xuat = true;
+
+            try
+            {
+                root.getContext().SaveChanges();
+            } catch(Exception ex)
+            {
+                root.Rollback();
+            }
+            return true;
+        }
+
 
         private int SumQuantity(List<models.TTPhieuXuat> item)
         {
@@ -57,10 +107,20 @@ namespace QL_ThuySan.controls
         {
             exportView.SetId(id);
         }
+        private void SetPageNumber()
+        {
+            if(isSeachMode)
+            {
+                PageNumber = (int)(((double)root.getContext().PhieuXuats.Where(e => e.id_kh.ToString().Contains(tSearch.Text) || e.KhachHang.ten_kh.ToLower().Contains(tSearch.Text.ToLower())).Count() / PageSize) + 0.999999);
+                return;
+            }
+            PageNumber = (int)(((double)root.getContext().PhieuXuats.Count() / PageSize) + 0.999999);
+        }
 
         public void ReLoad()
         {
-            SetList();
+            SetPageNumber();
+            SetList(1);
 
             RenderList(tSearch.Text);
       
@@ -161,9 +221,16 @@ namespace QL_ThuySan.controls
 
             ResizeList();
         }
-        private void SetList()
+        private void SetList(int pageIndex)
         {
-            List = root.getContext().PhieuXuats.OrderByDescending(e => e.Id_px).ToList();
+            if(isSeachMode)
+            {
+                tPage.Text = pageIndex.ToString();
+                List = root.getContext().PhieuXuats.Where(e => e.id_kh.ToString().Contains(tSearch.Text) || e.KhachHang.ten_kh.ToLower().Contains(tSearch.Text.ToLower())).OrderByDescending(e => e.Id_px).Skip((pageIndex - 1) * PageSize).Take(PageSize).ToList();
+                return;
+            }
+            tPage.Text = pageIndex.ToString();
+            List = root.getContext().PhieuXuats.OrderByDescending(e => e.Id_px).Skip((pageIndex - 1) * PageSize).Take(PageSize).ToList();
         }
 
         protected override void OnResize(System.EventArgs e)
@@ -183,6 +250,62 @@ namespace QL_ThuySan.controls
         private void bAddKH_Click(object sender, EventArgs e)
         {
             root.SetMiniControl(new CreatePhieuXuat(root));
+        }
+
+        private void bNextPage_Click(object sender, EventArgs e)
+        {
+            int Nextpage = (int.Parse(tPage.Text) + 1);
+            if (!(Nextpage <= PageNumber))
+                return;
+
+            SetList(Nextpage);
+            RenderList();
+        }
+
+        private void bPrevPage_Click(object sender, EventArgs e)
+        {
+            int Prevpage = (int.Parse(tPage.Text) - 1);
+            if (Prevpage == 0)
+                return;
+
+            SetList(Prevpage);
+            RenderList();
+        }
+
+        private void bRemoveSearch_Click(object sender, EventArgs e)
+        {
+            isSeachMode = false;
+            bRemoveSearch.Visible = false;
+            tSearch.Text = "";
+
+            SetPageNumber();
+            SetList(1);
+
+            RenderList();
+        }
+
+        private void bSearch_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(tSearch.Text))
+            {
+                isSeachMode = false;
+                bRemoveSearch.Visible = false;
+                tSearch.Text = "";
+
+                SetPageNumber();
+                SetList(1);
+
+                RenderList();
+                return;
+            }
+                
+            isSeachMode = true;
+            bRemoveSearch.Visible = true;
+
+            SetPageNumber();
+            SetList(1);
+            
+            RenderList();
         }
     }
 }

@@ -17,6 +17,12 @@ namespace QL_ThuySan.controls
         private ImportView importView;
 
         private List<models.PhieuNhap> List;
+
+        private int PageSize = 30;
+        private int PageNumber;
+
+        private bool isSeachMode = false;
+
         public ImportController(FrRoot root)
         {
             this.root = root;
@@ -33,7 +39,8 @@ namespace QL_ThuySan.controls
 
         public void ReLoad()
         {
-            SetList();
+            SetPageNumber();
+            SetList(1);
 
             RenderList(tSearch.Text);
 
@@ -101,6 +108,8 @@ namespace QL_ThuySan.controls
 
         private void RenderList()
         {
+            pUnList.VerticalScroll.Value = 0;
+
             int controlsNumber = pUnList.Controls.Count;
             int count = 0;
 
@@ -179,7 +188,6 @@ namespace QL_ThuySan.controls
                     temp.trongLuong = SumQuantity(item.TTPhieuNhaps.ToList());
                     temp.daThem = item.da_nhap;
 
-
                     temp.ReRender();
 
                     pUnList.Controls.Add(temp);
@@ -194,9 +202,25 @@ namespace QL_ThuySan.controls
 
             ResizeList();
         }
-        private void SetList()
+        private void SetPageNumber()
         {
-            List = root.getContext().PhieuNhaps.OrderByDescending(e => e.Id_pn).ToList();
+            if (isSeachMode)
+            {
+                PageNumber = (int)(((double)root.getContext().PhieuNhaps.Where(e => e.Id_pn.ToString().Contains(tSearch.Text) || e.NhaCungCap.ten_ncp.ToLower().Contains(tSearch.Text.ToLower())).Count() / PageSize) + 0.999999);
+                return;
+            }
+            PageNumber = (int)(((double)root.getContext().PhieuNhaps.Count() / PageSize) +0.999999);
+        }
+        private void SetList(int pageIndex)
+        {
+            if (isSeachMode)
+            {
+                tPage.Text = pageIndex.ToString();
+                List = root.getContext().PhieuNhaps.Where(e => e.Id_pn.ToString().Contains(tSearch.Text) || e.NhaCungCap.ten_ncp.ToLower().Contains(tSearch.Text.ToLower())).OrderByDescending(e => e.Id_pn).Skip((pageIndex - 1) * PageSize).Take(PageSize).ToList();
+                return;
+            }
+            tPage.Text = pageIndex.ToString();
+            List = root.getContext().PhieuNhaps.OrderByDescending(e => e.Id_pn).Skip((pageIndex-1)* PageSize).Take(PageSize).ToList();
         }
 
         protected override void OnResize(System.EventArgs e)
@@ -213,14 +237,65 @@ namespace QL_ThuySan.controls
             }
         }
 
-        private void tSearch_TextChanged(object sender, EventArgs e)
-        {
-            RenderList(tSearch.Text);
-        }
-
         private void bAddKH_Click(object sender, EventArgs e)
         {
             root.SetMiniControl(new CreatePhieuNhap(root));
+        }
+
+        private void Search(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(tSearch.Text))
+            {
+                isSeachMode = false;
+                bRemoveSearch.Visible = false;
+                tSearch.Text = "";
+
+                SetPageNumber();
+                SetList(1);
+
+                RenderList();
+                return;
+            }
+
+            isSeachMode = true;
+            bRemoveSearch.Visible = true;
+
+            SetPageNumber();
+            SetList(1);
+
+            RenderList();     
+    }
+
+        private void bNextPage_Click(object sender, EventArgs e)
+        {
+            int Nextpage = (int.Parse(tPage.Text) + 1);
+            if (!(Nextpage <= PageNumber))
+                return;
+
+            SetList(Nextpage);
+            RenderList();
+        }
+
+        private void bPrevPage_Click(object sender, EventArgs e)
+        {
+            int Prevpage = (int.Parse(tPage.Text) - 1);
+            if (Prevpage == 0)
+                return;
+
+            SetList(Prevpage);
+            RenderList();
+        }
+
+        private void bRemoveSearch_Click(object sender, EventArgs e)
+        {
+            isSeachMode = false;
+            bRemoveSearch.Visible = false;
+            tSearch.Text = "";
+
+            SetPageNumber();
+            SetList(1);
+
+            RenderList();
         }
     }
 }

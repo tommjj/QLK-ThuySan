@@ -43,13 +43,23 @@ namespace QL_ThuySan.controls
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tSearch = new System.Windows.Forms.TextBox();
             this.pEditKHControl = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.bSearch = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.tPage = new System.Windows.Forms.TextBox();
+            this.bNextPage = new System.Windows.Forms.Button();
+            this.bPrevPage = new System.Windows.Forms.Button();
+            this.bRemoveSearch = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel5.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -128,10 +138,11 @@ namespace QL_ThuySan.controls
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.panel7);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 695);
+            this.panel4.Location = new System.Drawing.Point(0, 690);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(852, 40);
+            this.panel4.Size = new System.Drawing.Size(852, 45);
             this.panel4.TabIndex = 2;
             // 
             // pUnList
@@ -160,7 +171,7 @@ namespace QL_ThuySan.controls
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.tSearch, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel5, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -181,10 +192,12 @@ namespace QL_ThuySan.controls
             // 
             // tSearch
             // 
+            this.tSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tSearch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tSearch.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tSearch.Location = new System.Drawing.Point(73, 3);
+            this.tSearch.Location = new System.Drawing.Point(0, 0);
             this.tSearch.Name = "tSearch";
-            this.tSearch.Size = new System.Drawing.Size(776, 38);
+            this.tSearch.Size = new System.Drawing.Size(658, 38);
             this.tSearch.TabIndex = 1;
             // 
             // pEditKHControl
@@ -195,6 +208,105 @@ namespace QL_ThuySan.controls
             this.pEditKHControl.Name = "pEditKHControl";
             this.pEditKHControl.Size = new System.Drawing.Size(366, 735);
             this.pEditKHControl.TabIndex = 2;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.bRemoveSearch);
+            this.panel5.Controls.Add(this.tSearch);
+            this.panel5.Controls.Add(this.bSearch);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(70, 0);
+            this.panel5.Margin = new System.Windows.Forms.Padding(0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(782, 40);
+            this.panel5.TabIndex = 1;
+            // 
+            // bSearch
+            // 
+            this.bSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
+            this.bSearch.Dock = System.Windows.Forms.DockStyle.Right;
+            this.bSearch.FlatAppearance.BorderSize = 0;
+            this.bSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bSearch.ForeColor = System.Drawing.Color.White;
+            this.bSearch.Location = new System.Drawing.Point(658, 0);
+            this.bSearch.Name = "bSearch";
+            this.bSearch.Size = new System.Drawing.Size(124, 40);
+            this.bSearch.TabIndex = 0;
+            this.bSearch.Text = "Tìm kiếm";
+            this.bSearch.UseVisualStyleBackColor = false;
+            this.bSearch.Click += new System.EventHandler(this.bSearch_Click);
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.tPage);
+            this.panel7.Controls.Add(this.bNextPage);
+            this.panel7.Controls.Add(this.bPrevPage);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel7.Location = new System.Drawing.Point(532, 0);
+            this.panel7.Margin = new System.Windows.Forms.Padding(0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(320, 45);
+            this.panel7.TabIndex = 4;
+            // 
+            // tPage
+            // 
+            this.tPage.BackColor = System.Drawing.Color.White;
+            this.tPage.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tPage.Cursor = System.Windows.Forms.Cursors.Default;
+            this.tPage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tPage.Location = new System.Drawing.Point(162, 9);
+            this.tPage.Name = "tPage";
+            this.tPage.ReadOnly = true;
+            this.tPage.Size = new System.Drawing.Size(75, 27);
+            this.tPage.TabIndex = 2;
+            this.tPage.Text = "1";
+            this.tPage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // bNextPage
+            // 
+            this.bNextPage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bNextPage.FlatAppearance.BorderSize = 0;
+            this.bNextPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bNextPage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bNextPage.Location = new System.Drawing.Point(243, 2);
+            this.bNextPage.Name = "bNextPage";
+            this.bNextPage.Size = new System.Drawing.Size(75, 42);
+            this.bNextPage.TabIndex = 0;
+            this.bNextPage.Text = ">>";
+            this.bNextPage.UseVisualStyleBackColor = true;
+            this.bNextPage.Click += new System.EventHandler(this.bNextPage_Click);
+            // 
+            // bPrevPage
+            // 
+            this.bPrevPage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bPrevPage.FlatAppearance.BorderSize = 0;
+            this.bPrevPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bPrevPage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bPrevPage.Location = new System.Drawing.Point(81, 2);
+            this.bPrevPage.Name = "bPrevPage";
+            this.bPrevPage.Size = new System.Drawing.Size(75, 42);
+            this.bPrevPage.TabIndex = 1;
+            this.bPrevPage.Text = "<<";
+            this.bPrevPage.UseVisualStyleBackColor = true;
+            this.bPrevPage.Click += new System.EventHandler(this.bPrevPage_Click);
+            // 
+            // bRemoveSearch
+            // 
+            this.bRemoveSearch.Dock = System.Windows.Forms.DockStyle.Right;
+            this.bRemoveSearch.FlatAppearance.BorderSize = 0;
+            this.bRemoveSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.bRemoveSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.bRemoveSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bRemoveSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bRemoveSearch.Image = ((System.Drawing.Image)(resources.GetObject("bRemoveSearch.Image")));
+            this.bRemoveSearch.Location = new System.Drawing.Point(614, 0);
+            this.bRemoveSearch.Name = "bRemoveSearch";
+            this.bRemoveSearch.Size = new System.Drawing.Size(44, 40);
+            this.bRemoveSearch.TabIndex = 2;
+            this.bRemoveSearch.UseVisualStyleBackColor = true;
+            this.bRemoveSearch.Visible = false;
+            this.bRemoveSearch.Click += new System.EventHandler(this.bRemoveSearch_Click);
             // 
             // ExportController
             // 
@@ -209,10 +321,14 @@ namespace QL_ThuySan.controls
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -232,5 +348,12 @@ namespace QL_ThuySan.controls
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox tSearch;
         private System.Windows.Forms.Panel pEditKHControl;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button bSearch;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.TextBox tPage;
+        private System.Windows.Forms.Button bNextPage;
+        private System.Windows.Forms.Button bPrevPage;
+        private System.Windows.Forms.Button bRemoveSearch;
     }
 }
