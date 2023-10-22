@@ -37,29 +37,29 @@ namespace QL_ThuySan.controls
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pUnList = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tSearch = new System.Windows.Forms.TextBox();
-            this.pEditKHControl = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.bSearch = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.tPage = new System.Windows.Forms.TextBox();
             this.bNextPage = new System.Windows.Forms.Button();
             this.bPrevPage = new System.Windows.Forms.Button();
+            this.pUnList = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.bRemoveSearch = new System.Windows.Forms.Button();
+            this.tSearch = new System.Windows.Forms.TextBox();
+            this.bSearch = new System.Windows.Forms.Button();
+            this.pEditKHControl = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -145,98 +145,6 @@ namespace QL_ThuySan.controls
             this.panel4.Size = new System.Drawing.Size(852, 45);
             this.panel4.TabIndex = 2;
             // 
-            // pUnList
-            // 
-            this.pUnList.AutoScroll = true;
-            this.pUnList.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pUnList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pUnList.Location = new System.Drawing.Point(0, 63);
-            this.pUnList.Name = "pUnList";
-            this.pUnList.Padding = new System.Windows.Forms.Padding(6, 2, 0, 0);
-            this.pUnList.Size = new System.Drawing.Size(852, 672);
-            this.pUnList.TabIndex = 1;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.tableLayoutPanel2);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(852, 63);
-            this.panel6.TabIndex = 0;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.panel5, 1, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(852, 63);
-            this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
-            this.pictureBox1.Size = new System.Drawing.Size(53, 41);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // tSearch
-            // 
-            this.tSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tSearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tSearch.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tSearch.Location = new System.Drawing.Point(0, 0);
-            this.tSearch.Name = "tSearch";
-            this.tSearch.Size = new System.Drawing.Size(658, 38);
-            this.tSearch.TabIndex = 1;
-            // 
-            // pEditKHControl
-            // 
-            this.pEditKHControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pEditKHControl.Location = new System.Drawing.Point(852, 0);
-            this.pEditKHControl.Margin = new System.Windows.Forms.Padding(0);
-            this.pEditKHControl.Name = "pEditKHControl";
-            this.pEditKHControl.Size = new System.Drawing.Size(366, 735);
-            this.pEditKHControl.TabIndex = 2;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.bRemoveSearch);
-            this.panel5.Controls.Add(this.tSearch);
-            this.panel5.Controls.Add(this.bSearch);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(70, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(782, 40);
-            this.panel5.TabIndex = 1;
-            // 
-            // bSearch
-            // 
-            this.bSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
-            this.bSearch.Dock = System.Windows.Forms.DockStyle.Right;
-            this.bSearch.FlatAppearance.BorderSize = 0;
-            this.bSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bSearch.ForeColor = System.Drawing.Color.White;
-            this.bSearch.Location = new System.Drawing.Point(658, 0);
-            this.bSearch.Name = "bSearch";
-            this.bSearch.Size = new System.Drawing.Size(124, 40);
-            this.bSearch.TabIndex = 0;
-            this.bSearch.Text = "Tìm kiếm";
-            this.bSearch.UseVisualStyleBackColor = false;
-            this.bSearch.Click += new System.EventHandler(this.bSearch_Click);
-            // 
             // panel7
             // 
             this.panel7.Controls.Add(this.tPage);
@@ -291,6 +199,63 @@ namespace QL_ThuySan.controls
             this.bPrevPage.UseVisualStyleBackColor = true;
             this.bPrevPage.Click += new System.EventHandler(this.bPrevPage_Click);
             // 
+            // pUnList
+            // 
+            this.pUnList.AutoScroll = true;
+            this.pUnList.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pUnList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pUnList.Location = new System.Drawing.Point(0, 63);
+            this.pUnList.Name = "pUnList";
+            this.pUnList.Padding = new System.Windows.Forms.Padding(6, 2, 0, 0);
+            this.pUnList.Size = new System.Drawing.Size(852, 672);
+            this.pUnList.TabIndex = 1;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.tableLayoutPanel2);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(852, 63);
+            this.panel6.TabIndex = 0;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel5, 1, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(852, 63);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
+            this.pictureBox1.Size = new System.Drawing.Size(53, 41);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.bRemoveSearch);
+            this.panel5.Controls.Add(this.tSearch);
+            this.panel5.Controls.Add(this.bSearch);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(70, 0);
+            this.panel5.Margin = new System.Windows.Forms.Padding(0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(782, 40);
+            this.panel5.TabIndex = 1;
+            // 
             // bRemoveSearch
             // 
             this.bRemoveSearch.Dock = System.Windows.Forms.DockStyle.Right;
@@ -308,6 +273,41 @@ namespace QL_ThuySan.controls
             this.bRemoveSearch.Visible = false;
             this.bRemoveSearch.Click += new System.EventHandler(this.bRemoveSearch_Click);
             // 
+            // tSearch
+            // 
+            this.tSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tSearch.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tSearch.Location = new System.Drawing.Point(0, 0);
+            this.tSearch.Name = "tSearch";
+            this.tSearch.Size = new System.Drawing.Size(658, 38);
+            this.tSearch.TabIndex = 1;
+            // 
+            // bSearch
+            // 
+            this.bSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
+            this.bSearch.Dock = System.Windows.Forms.DockStyle.Right;
+            this.bSearch.FlatAppearance.BorderSize = 0;
+            this.bSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bSearch.ForeColor = System.Drawing.Color.White;
+            this.bSearch.Location = new System.Drawing.Point(658, 0);
+            this.bSearch.Name = "bSearch";
+            this.bSearch.Size = new System.Drawing.Size(124, 40);
+            this.bSearch.TabIndex = 0;
+            this.bSearch.Text = "Tìm kiếm";
+            this.bSearch.UseVisualStyleBackColor = false;
+            this.bSearch.Click += new System.EventHandler(this.bSearch_Click);
+            // 
+            // pEditKHControl
+            // 
+            this.pEditKHControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pEditKHControl.Location = new System.Drawing.Point(852, 0);
+            this.pEditKHControl.Margin = new System.Windows.Forms.Padding(0);
+            this.pEditKHControl.Name = "pEditKHControl";
+            this.pEditKHControl.Size = new System.Drawing.Size(366, 735);
+            this.pEditKHControl.TabIndex = 2;
+            // 
             // ExportController
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -322,13 +322,13 @@ namespace QL_ThuySan.controls
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }

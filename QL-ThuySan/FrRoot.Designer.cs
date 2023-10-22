@@ -102,7 +102,7 @@ namespace QL_ThuySan
             this.pNav.MaximumSize = new System.Drawing.Size(290, 0);
             this.pNav.MinimumSize = new System.Drawing.Size(270, 0);
             this.pNav.Name = "pNav";
-            this.pNav.Size = new System.Drawing.Size(270, 798);
+            this.pNav.Size = new System.Drawing.Size(285, 801);
             this.pNav.TabIndex = 0;
             // 
             // panel10
@@ -110,16 +110,16 @@ namespace QL_ThuySan
             this.panel10.Controls.Add(this.panel11);
             this.panel10.Controls.Add(this.flowLayoutPanel1);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel10.Location = new System.Drawing.Point(-17, 0);
+            this.panel10.Location = new System.Drawing.Point(-2, 0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(287, 798);
+            this.panel10.Size = new System.Drawing.Size(287, 801);
             this.panel10.TabIndex = 2;
             // 
             // panel11
             // 
             this.panel11.Controls.Add(this.panel9);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel11.Location = new System.Drawing.Point(0, 734);
+            this.panel11.Location = new System.Drawing.Point(0, 737);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(287, 64);
             this.panel11.TabIndex = 1;
@@ -169,7 +169,7 @@ namespace QL_ThuySan
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(287, 798);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(287, 801);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // panel8
@@ -401,8 +401,8 @@ namespace QL_ThuySan
             this.mainLayout.Name = "mainLayout";
             this.mainLayout.RowCount = 1;
             this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 798F));
-            this.mainLayout.Size = new System.Drawing.Size(1485, 798);
+            this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 871F));
+            this.mainLayout.Size = new System.Drawing.Size(1585, 801);
             this.mainLayout.TabIndex = 1;
             // 
             // Main
@@ -411,10 +411,10 @@ namespace QL_ThuySan
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Main.BackColor = System.Drawing.Color.White;
-            this.Main.Location = new System.Drawing.Point(267, 0);
+            this.Main.Location = new System.Drawing.Point(285, 0);
             this.Main.Margin = new System.Windows.Forms.Padding(0);
             this.Main.Name = "Main";
-            this.Main.Size = new System.Drawing.Size(1218, 798);
+            this.Main.Size = new System.Drawing.Size(1300, 801);
             this.Main.TabIndex = 1;
             // 
             // root
@@ -424,7 +424,7 @@ namespace QL_ThuySan
             this.root.Location = new System.Drawing.Point(0, 0);
             this.root.Margin = new System.Windows.Forms.Padding(0);
             this.root.Name = "root";
-            this.root.Size = new System.Drawing.Size(1485, 798);
+            this.root.Size = new System.Drawing.Size(1585, 801);
             this.root.TabIndex = 2;
             // 
             // pMiniForm
@@ -432,9 +432,9 @@ namespace QL_ThuySan
             this.pMiniForm.Controls.Add(this.panel13);
             this.pMiniForm.Controls.Add(this.panel12);
             this.pMiniForm.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pMiniForm.Location = new System.Drawing.Point(687, 0);
+            this.pMiniForm.Location = new System.Drawing.Point(787, 0);
             this.pMiniForm.Name = "pMiniForm";
-            this.pMiniForm.Size = new System.Drawing.Size(798, 798);
+            this.pMiniForm.Size = new System.Drawing.Size(798, 801);
             this.pMiniForm.TabIndex = 0;
             this.pMiniForm.Visible = false;
             // 
@@ -446,7 +446,7 @@ namespace QL_ThuySan
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel13.Location = new System.Drawing.Point(4, 0);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(794, 798);
+            this.panel13.Size = new System.Drawing.Size(794, 801);
             this.panel13.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -462,7 +462,7 @@ namespace QL_ThuySan
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.763926F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.23608F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(794, 754);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(794, 757);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // pMiniControl
@@ -471,7 +471,7 @@ namespace QL_ThuySan
             this.pMiniControl.Location = new System.Drawing.Point(85, 51);
             this.pMiniControl.Margin = new System.Windows.Forms.Padding(0);
             this.pMiniControl.Name = "pMiniControl";
-            this.pMiniControl.Size = new System.Drawing.Size(709, 703);
+            this.pMiniControl.Size = new System.Drawing.Size(709, 706);
             this.pMiniControl.TabIndex = 1;
             // 
             // panel14
@@ -502,7 +502,7 @@ namespace QL_ThuySan
             this.panel12.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel12.Location = new System.Drawing.Point(0, 0);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(4, 798);
+            this.panel12.Size = new System.Drawing.Size(4, 801);
             this.panel12.TabIndex = 0;
             // 
             // pExtensionMiniForm
@@ -510,9 +510,9 @@ namespace QL_ThuySan
             this.pExtensionMiniForm.Controls.Add(this.panel16);
             this.pExtensionMiniForm.Controls.Add(this.panel15);
             this.pExtensionMiniForm.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pExtensionMiniForm.Location = new System.Drawing.Point(296, 0);
+            this.pExtensionMiniForm.Location = new System.Drawing.Point(396, 0);
             this.pExtensionMiniForm.Name = "pExtensionMiniForm";
-            this.pExtensionMiniForm.Size = new System.Drawing.Size(391, 798);
+            this.pExtensionMiniForm.Size = new System.Drawing.Size(391, 801);
             this.pExtensionMiniForm.TabIndex = 0;
             this.pExtensionMiniForm.Visible = false;
             // 
@@ -523,7 +523,7 @@ namespace QL_ThuySan
             this.panel16.Location = new System.Drawing.Point(0, 0);
             this.panel16.Margin = new System.Windows.Forms.Padding(0);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(4, 798);
+            this.panel16.Size = new System.Drawing.Size(4, 801);
             this.panel16.TabIndex = 0;
             // 
             // panel15
@@ -535,7 +535,7 @@ namespace QL_ThuySan
             this.panel15.Location = new System.Drawing.Point(0, 0);
             this.panel15.Margin = new System.Windows.Forms.Padding(0);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(391, 798);
+            this.panel15.Size = new System.Drawing.Size(391, 801);
             this.panel15.TabIndex = 0;
             // 
             // pExtensionMiniControl
@@ -544,7 +544,7 @@ namespace QL_ThuySan
             this.pExtensionMiniControl.Location = new System.Drawing.Point(0, 44);
             this.pExtensionMiniControl.Margin = new System.Windows.Forms.Padding(0);
             this.pExtensionMiniControl.Name = "pExtensionMiniControl";
-            this.pExtensionMiniControl.Size = new System.Drawing.Size(391, 754);
+            this.pExtensionMiniControl.Size = new System.Drawing.Size(391, 757);
             this.pExtensionMiniControl.TabIndex = 1;
             // 
             // panel17
@@ -574,11 +574,11 @@ namespace QL_ThuySan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1485, 798);
+            this.ClientSize = new System.Drawing.Size(1585, 801);
             this.Controls.Add(this.pExtensionMiniForm);
             this.Controls.Add(this.pMiniForm);
             this.Controls.Add(this.root);
-            this.MinimumSize = new System.Drawing.Size(1503, 845);
+            this.MinimumSize = new System.Drawing.Size(1603, 848);
             this.Name = "FrRoot";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QLKho";

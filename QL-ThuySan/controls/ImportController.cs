@@ -14,7 +14,7 @@ namespace QL_ThuySan.controls
     public partial class ImportController : UserControl
     {
         private FrRoot root;
-        private ImportView importView;
+        private ViewImport importView;
 
         private List<models.PhieuNhap> List;
 
@@ -27,7 +27,7 @@ namespace QL_ThuySan.controls
         {
             this.root = root;
             InitializeComponent();
-            importView = new ImportView(root);
+            importView = new ViewImport(root);
             importView.SetId(-1);
             pEditKHControl.Controls.Add(importView);
         }
@@ -216,7 +216,8 @@ namespace QL_ThuySan.controls
             if (isSeachMode)
             {
                 tPage.Text = pageIndex.ToString();
-                List = root.getContext().PhieuNhaps.Where(e => e.Id_pn.ToString().Contains(tSearch.Text) || e.NhaCungCap.ten_ncp.ToLower().Contains(tSearch.Text.ToLower())).OrderByDescending(e => e.Id_pn).Skip((pageIndex - 1) * PageSize).Take(PageSize).ToList();
+                List = root.getContext().PhieuNhaps.Where(e => e.Id_pn.ToString().Contains(tSearch.Text) || e.NhaCungCap.ten_ncp.ToLower().Contains(tSearch.Text.ToLower())).OrderByDescending(e => e.Id_pn                
+                ).Skip((pageIndex - 1) * PageSize).Take(PageSize).ToList();
                 return;
             }
             tPage.Text = pageIndex.ToString();

@@ -110,16 +110,13 @@ namespace QL_ThuySan
         public void Setup()
         {
             //SetLock();
-
-          
-
             /* ... */
 
             //
             SetNavButtonColorActive(bHome);
             SetMainControl(homeController);
 
-            ResizeControl();        
+            OnResize(new EventArgs());
         }
 
         public void SetLock()

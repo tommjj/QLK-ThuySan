@@ -136,17 +136,17 @@
     <Compile Include="components\EditThuySan.Designer.cs">
       <DependentUpon>EditThuySan.cs</DependentUpon>
     </Compile>
-    <Compile Include="components\ExportView.cs">
+    <Compile Include="components\ViewExport.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="components\ExportView.Designer.cs">
-      <DependentUpon>ExportView.cs</DependentUpon>
+    <Compile Include="components\ViewExport.Designer.cs">
+      <DependentUpon>ViewExport.cs</DependentUpon>
     </Compile>
-    <Compile Include="components\ImportView.cs">
+    <Compile Include="components\ViewImport.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="components\ImportView.Designer.cs">
-      <DependentUpon>ImportView.cs</DependentUpon>
+    <Compile Include="components\ViewImport.Designer.cs">
+      <DependentUpon>ViewImport.cs</DependentUpon>
     </Compile>
     <Compile Include="components\LICreatePhieuXuat.cs">
       <SubType>UserControl</SubType>
@@ -322,11 +322,11 @@
     <EmbeddedResource Include="components\EditThuySan.resx">
       <DependentUpon>EditThuySan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="components\ExportView.resx">
-      <DependentUpon>ExportView.cs</DependentUpon>
+    <EmbeddedResource Include="components\ViewExport.resx">
+      <DependentUpon>ViewExport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="components\ImportView.resx">
-      <DependentUpon>ImportView.cs</DependentUpon>
+    <EmbeddedResource Include="components\ViewImport.resx">
+      <DependentUpon>ViewImport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="components\LICreatePhieuXuat.resx">
       <DependentUpon>LICreatePhieuXuat.cs</DependentUpon>
@@ -432,6 +432,7 @@
     <Content Include="res\icon\log-out-circle-regular-24.png" />
     <Content Include="res\icon\log-out-regular-24.png" />
     <Content Include="res\icon\package-solid.png" />
+    <Content Include="res\icon\printer-regular-24.png" />
     <Content Include="res\icon\search-regular-24.png" />
     <Content Include="res\icon\store-alt-regular.png" />
     <Content Include="res\icon\trash-regular-24.png" />

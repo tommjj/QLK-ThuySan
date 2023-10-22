@@ -15,7 +15,7 @@ namespace QL_ThuySan.controls
     {
         private FrRoot root;
 
-        private ExportView exportView;
+        private ViewExport exportView;
 
         private List<models.PhieuXuat> List;
 
@@ -30,7 +30,7 @@ namespace QL_ThuySan.controls
             init();
             InitializeComponent();
 
-            exportView = new ExportView(root);
+            exportView = new ViewExport(root);
             exportView.SetId(-1); 
             pEditKHControl.Controls.Add(exportView);
         }
