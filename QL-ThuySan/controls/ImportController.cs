@@ -18,7 +18,7 @@ namespace QL_ThuySan.controls
 
         private List<models.PhieuNhap> List;
 
-        private int PageSize = 30;
+        private int PageSize = 2;
         private int PageNumber;
 
         private bool isSeachMode = false;

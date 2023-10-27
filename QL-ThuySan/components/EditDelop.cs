@@ -57,7 +57,7 @@ namespace QL_ThuySan.components
             delop.ten_kho = tName.Text;
             root.getContext().SaveChanges();
 
-            root.GetHomeController().ReLoad();
+            root.GetDepotController().ReLoad();
         }
 
         private void bDeleteDelop_Click(object sender, EventArgs e)
@@ -71,7 +71,7 @@ namespace QL_ThuySan.components
                 if (user.password.TrimEnd(' ') == formlog.Password)
                 {
                     DeleteDelop(Id);
-                    root.GetHomeController().ReLoad();
+                    root.GetDepotController().ReLoad();
                 }
             }
             formlog.Dispose();

@@ -32,6 +32,7 @@ namespace QL_ThuySan.controls
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Lerr = new System.Windows.Forms.Label();
             this.bLogin = new System.Windows.Forms.Button();
             this.Password = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@ namespace QL_ThuySan.controls
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.Lerr = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -76,8 +76,8 @@ namespace QL_ThuySan.controls
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.81454F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.25063F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.06015F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.75439F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.06015F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(742, 798);
             this.tableLayoutPanel2.TabIndex = 0;
@@ -92,11 +92,21 @@ namespace QL_ThuySan.controls
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(161, 205);
+            this.panel1.Location = new System.Drawing.Point(161, 192);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(427, 400);
+            this.panel1.Size = new System.Drawing.Size(427, 413);
             this.panel1.TabIndex = 2;
+            // 
+            // Lerr
+            // 
+            this.Lerr.AutoSize = true;
+            this.Lerr.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lerr.ForeColor = System.Drawing.Color.Red;
+            this.Lerr.Location = new System.Drawing.Point(17, 69);
+            this.Lerr.Name = "Lerr";
+            this.Lerr.Size = new System.Drawing.Size(0, 19);
+            this.Lerr.TabIndex = 3;
             // 
             // bLogin
             // 
@@ -182,16 +192,6 @@ namespace QL_ThuySan.controls
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(10, 798);
             this.panel3.TabIndex = 0;
-            // 
-            // Lerr
-            // 
-            this.Lerr.AutoSize = true;
-            this.Lerr.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lerr.ForeColor = System.Drawing.Color.Red;
-            this.Lerr.Location = new System.Drawing.Point(17, 69);
-            this.Lerr.Name = "Lerr";
-            this.Lerr.Size = new System.Drawing.Size(0, 19);
-            this.Lerr.TabIndex = 3;
             // 
             // LoginController
             // 

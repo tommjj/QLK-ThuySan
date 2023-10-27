@@ -12,13 +12,13 @@ using System.Windows.Forms;
 
 namespace QL_ThuySan.controls
 {
-    public partial class HomeController : UserControl
+    public partial class DepotController : UserControl
     {
         private FrRoot root;
         private List<models.TonKho> List;
         private EditDelop editDelop;
 
-        public HomeController(FrRoot root)
+        public DepotController(FrRoot root)
         {
             this.root = root;
             InitializeComponent();
@@ -190,7 +190,7 @@ namespace QL_ThuySan.controls
         {
             foreach(Control item in pUnList.Controls)
             {
-                item.Width = pUnList.Width - (pUnList.Controls.Count < ((pUnList.Height - 6) / 91) + 3 ? 10 : 25);
+                item.Width = pUnList.Width - (pUnList.Controls.Count < ((pUnList.Height - 6) / 80) + 3 ? 10 : 25);
             }
         }
 

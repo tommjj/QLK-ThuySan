@@ -51,7 +51,6 @@ namespace QL_ThuySan
             this.bCustomer = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.bSupplier = new System.Windows.Forms.Button();
-            this.mainLayout = new System.Windows.Forms.TableLayoutPanel();
             this.Main = new System.Windows.Forms.Panel();
             this.root = new System.Windows.Forms.Panel();
             this.pMiniForm = new System.Windows.Forms.Panel();
@@ -67,6 +66,7 @@ namespace QL_ThuySan
             this.pExtensionMiniControl = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.mainLayout = new System.Windows.Forms.Panel();
             this.pNav.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -79,7 +79,6 @@ namespace QL_ThuySan
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.mainLayout.SuspendLayout();
             this.root.SuspendLayout();
             this.pMiniForm.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -90,13 +89,14 @@ namespace QL_ThuySan
             this.panel15.SuspendLayout();
             this.panel17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.mainLayout.SuspendLayout();
             this.SuspendLayout();
             // 
             // pNav
             // 
             this.pNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
             this.pNav.Controls.Add(this.panel10);
-            this.pNav.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pNav.Dock = System.Windows.Forms.DockStyle.Left;
             this.pNav.Location = new System.Drawing.Point(0, 0);
             this.pNav.Margin = new System.Windows.Forms.Padding(0);
             this.pNav.MaximumSize = new System.Drawing.Size(290, 0);
@@ -205,8 +205,8 @@ namespace QL_ThuySan
             // panel2
             // 
             this.panel2.Controls.Add(this.bHome);
-            this.panel2.Location = new System.Drawing.Point(7, 82);
-            this.panel2.Margin = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.panel2.Location = new System.Drawing.Point(4, 82);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 0, 0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(265, 58);
             this.panel2.TabIndex = 1;
@@ -236,8 +236,8 @@ namespace QL_ThuySan
             // panel3
             // 
             this.panel3.Controls.Add(this.bGoods);
-            this.panel3.Location = new System.Drawing.Point(7, 140);
-            this.panel3.Margin = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.panel3.Location = new System.Drawing.Point(4, 140);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 0, 0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(265, 58);
             this.panel3.TabIndex = 1;
@@ -267,8 +267,8 @@ namespace QL_ThuySan
             // panel5
             // 
             this.panel5.Controls.Add(this.bExport);
-            this.panel5.Location = new System.Drawing.Point(7, 198);
-            this.panel5.Margin = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.panel5.Location = new System.Drawing.Point(4, 198);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 0, 0, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(265, 58);
             this.panel5.TabIndex = 1;
@@ -298,8 +298,8 @@ namespace QL_ThuySan
             // panel4
             // 
             this.panel4.Controls.Add(this.bImport);
-            this.panel4.Location = new System.Drawing.Point(7, 256);
-            this.panel4.Margin = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.panel4.Location = new System.Drawing.Point(4, 256);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 0, 0, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(265, 58);
             this.panel4.TabIndex = 1;
@@ -329,8 +329,8 @@ namespace QL_ThuySan
             // panel6
             // 
             this.panel6.Controls.Add(this.bCustomer);
-            this.panel6.Location = new System.Drawing.Point(7, 314);
-            this.panel6.Margin = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.panel6.Location = new System.Drawing.Point(4, 314);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 0, 0, 0);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(265, 58);
             this.panel6.TabIndex = 1;
@@ -360,8 +360,8 @@ namespace QL_ThuySan
             // panel7
             // 
             this.panel7.Controls.Add(this.bSupplier);
-            this.panel7.Location = new System.Drawing.Point(7, 372);
-            this.panel7.Margin = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.panel7.Location = new System.Drawing.Point(4, 372);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4, 0, 0, 0);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(265, 58);
             this.panel7.TabIndex = 1;
@@ -388,29 +388,10 @@ namespace QL_ThuySan
             this.bSupplier.UseVisualStyleBackColor = false;
             this.bSupplier.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // mainLayout
-            // 
-            this.mainLayout.BackColor = System.Drawing.Color.White;
-            this.mainLayout.ColumnCount = 2;
-            this.mainLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18F));
-            this.mainLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 82F));
-            this.mainLayout.Controls.Add(this.pNav, 0, 0);
-            this.mainLayout.Controls.Add(this.Main, 1, 0);
-            this.mainLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainLayout.Location = new System.Drawing.Point(0, 0);
-            this.mainLayout.Name = "mainLayout";
-            this.mainLayout.RowCount = 1;
-            this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 871F));
-            this.mainLayout.Size = new System.Drawing.Size(1585, 801);
-            this.mainLayout.TabIndex = 1;
-            // 
             // Main
             // 
-            this.Main.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.Main.BackColor = System.Drawing.Color.White;
+            this.Main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Main.Location = new System.Drawing.Point(285, 0);
             this.Main.Margin = new System.Windows.Forms.Padding(0);
             this.Main.Name = "Main";
@@ -570,6 +551,16 @@ namespace QL_ThuySan
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pCloseExtension);
             // 
+            // mainLayout
+            // 
+            this.mainLayout.Controls.Add(this.Main);
+            this.mainLayout.Controls.Add(this.pNav);
+            this.mainLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainLayout.Location = new System.Drawing.Point(0, 0);
+            this.mainLayout.Name = "mainLayout";
+            this.mainLayout.Size = new System.Drawing.Size(1585, 801);
+            this.mainLayout.TabIndex = 0;
+            // 
             // FrRoot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -595,7 +586,6 @@ namespace QL_ThuySan
             this.panel4.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
-            this.mainLayout.ResumeLayout(false);
             this.root.ResumeLayout(false);
             this.pMiniForm.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
@@ -606,6 +596,7 @@ namespace QL_ThuySan
             this.panel15.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.mainLayout.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -628,7 +619,6 @@ namespace QL_ThuySan
         private System.Windows.Forms.Button bCustomer;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button bSupplier;
-        private System.Windows.Forms.TableLayoutPanel mainLayout;
         private System.Windows.Forms.Panel Main;
         private System.Windows.Forms.Panel root;
         private System.Windows.Forms.Panel panel1;
@@ -649,6 +639,7 @@ namespace QL_ThuySan
         private System.Windows.Forms.Panel pExtensionMiniControl;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel mainLayout;
     }
 }
 

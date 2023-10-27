@@ -40,7 +40,7 @@ namespace QL_ThuySan.form
 
                 root.getContext().SaveChanges();
 
-                root.GetHomeController().ReLoad();
+                root.GetDepotController().ReLoad();
                 this.Close();
             } catch (Exception ex)
             {

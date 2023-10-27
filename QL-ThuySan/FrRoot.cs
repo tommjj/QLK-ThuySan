@@ -15,7 +15,7 @@ namespace QL_ThuySan
 {
     public partial class FrRoot : Form
     {
-        private HomeController homeController;
+        private DepotController depotController;
         private LoginController loginController;
         private CustomerController customerController;
         private ExportController exportController;
@@ -51,7 +51,7 @@ namespace QL_ThuySan
             db.Connection();
 
             loginController = new LoginController(this);
-            homeController = new HomeController(this);
+            depotController = new DepotController(this);
             customerController = new CustomerController(this);
             exportController = new ExportController(this);
             importController = new ImportController(this);
@@ -61,9 +61,9 @@ namespace QL_ThuySan
             userId = 2;
         }
 
-        public HomeController GetHomeController()
+        public DepotController GetDepotController()
         {
-            return homeController;
+            return depotController;
         }
 
         public GoodsController GetGoodsController()
@@ -109,12 +109,12 @@ namespace QL_ThuySan
 
         public void Setup()
         {
-            //SetLock();
+            SetLock();
             /* ... */
 
             //
             SetNavButtonColorActive(bHome);
-            SetMainControl(homeController);
+            SetMainControl(depotController);
 
             OnResize(new EventArgs());
         }
@@ -206,8 +206,8 @@ namespace QL_ThuySan
             switch (name)
             {
                 case Pages.HOME_PAGE:
-                    SetMainControl(homeController);
-                    homeController.ReLoad();
+                    SetMainControl(depotController);
+                    depotController.ReLoad();
                     break;
                 case Pages.GOODS_PAGE:
                     SetMainControl(goodsController);

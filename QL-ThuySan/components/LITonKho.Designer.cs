@@ -55,7 +55,7 @@ namespace QL_ThuySan.components
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(869, 85);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(869, 73);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel2
@@ -64,7 +64,7 @@ namespace QL_ThuySan.components
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(653, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(213, 79);
+            this.panel2.Size = new System.Drawing.Size(213, 67);
             this.panel2.TabIndex = 1;
             // 
             // lSoLuong
@@ -88,7 +88,7 @@ namespace QL_ThuySan.components
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(650, 85);
+            this.panel1.Size = new System.Drawing.Size(650, 73);
             this.panel1.TabIndex = 0;
             // 
             // panel3
@@ -98,7 +98,7 @@ namespace QL_ThuySan.components
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(5, 85);
+            this.panel3.Size = new System.Drawing.Size(5, 73);
             this.panel3.TabIndex = 3;
             // 
             // label1
@@ -139,7 +139,7 @@ namespace QL_ThuySan.components
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "LITonKho";
-            this.Size = new System.Drawing.Size(869, 85);
+            this.Size = new System.Drawing.Size(869, 73);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

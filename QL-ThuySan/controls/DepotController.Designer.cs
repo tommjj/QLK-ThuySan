@@ -1,7 +1,7 @@
 ﻿
 namespace QL_ThuySan.controls
 {
-    partial class HomeController
+    partial class DepotController
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace QL_ThuySan.controls
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeController));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DepotController));
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.PList = new System.Windows.Forms.Panel();

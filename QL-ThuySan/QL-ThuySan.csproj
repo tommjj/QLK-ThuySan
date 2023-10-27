@@ -232,11 +232,11 @@
     <Compile Include="controls\ExportController.Designer.cs">
       <DependentUpon>ExportController.cs</DependentUpon>
     </Compile>
-    <Compile Include="controls\HomeController.cs">
+    <Compile Include="controls\DepotController.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="controls\HomeController.Designer.cs">
-      <DependentUpon>HomeController.cs</DependentUpon>
+    <Compile Include="controls\DepotController.Designer.cs">
+      <DependentUpon>DepotController.cs</DependentUpon>
     </Compile>
     <Compile Include="controls\ImportController.cs">
       <SubType>UserControl</SubType>
@@ -370,8 +370,8 @@
     <EmbeddedResource Include="controls\ExportController.resx">
       <DependentUpon>ExportController.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="controls\HomeController.resx">
-      <DependentUpon>HomeController.cs</DependentUpon>
+    <EmbeddedResource Include="controls\DepotController.resx">
+      <DependentUpon>DepotController.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="controls\ImportController.resx">
       <DependentUpon>ImportController.cs</DependentUpon>
