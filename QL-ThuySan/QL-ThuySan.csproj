@@ -59,6 +59,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -220,6 +221,12 @@
     <Compile Include="controls\CustomerController.Designer.cs">
       <DependentUpon>CustomerController.cs</DependentUpon>
     </Compile>
+    <Compile Include="controls\DashboardController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\DashboardController.Designer.cs">
+      <DependentUpon>DashboardController.cs</DependentUpon>
+    </Compile>
     <Compile Include="controls\GoodsController.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -363,6 +370,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="controls\CustomerController.resx">
       <DependentUpon>CustomerController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\DashboardController.resx">
+      <DependentUpon>DashboardController.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="controls\GoodsController.resx">
       <DependentUpon>GoodsController.cs</DependentUpon>

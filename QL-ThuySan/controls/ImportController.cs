@@ -18,7 +18,7 @@ namespace QL_ThuySan.controls
 
         private List<models.PhieuNhap> List;
 
-        private int PageSize = 2;
+        private int PageSize = 30;
         private int PageNumber;
 
         private bool isSeachMode = false;
@@ -265,7 +265,7 @@ namespace QL_ThuySan.controls
             SetList(1);
 
             RenderList();     
-    }
+        }
 
         private void bNextPage_Click(object sender, EventArgs e)
         {

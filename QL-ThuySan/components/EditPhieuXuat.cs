@@ -124,7 +124,7 @@ namespace QL_ThuySan.components
             tKH.ForeColor = Color.Black;
         }
 
-        private void bSave_Click(object sender, EventArgs ev)
+        private void Save()
         {
             var kh = root.getContext().KhachHangs.SingleOrDefault(e => e.ten_kh == tKH.Text);
             var kho = root.getContext().Khoes.SingleOrDefault(e => e.ten_kho == cKho.SelectedItem.ToString());
@@ -146,6 +146,11 @@ namespace QL_ThuySan.components
             root.getContext().SaveChanges();
             root.GetExportController().ReLoad();
             root.MiniControlClose();
+        }
+
+        private void bSave_Click(object sender, EventArgs ev)
+        {
+            Save();
         }
 
         private void tKH_Leave(object sender, EventArgs e)

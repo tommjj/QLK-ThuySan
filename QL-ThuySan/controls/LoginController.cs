@@ -31,19 +31,6 @@ namespace QL_ThuySan.controls
             string username = tUsername.Text;
             string password = Password.Text;
 
-            /*
-            using (var context = new Models())
-            {
-                var acc = new account
-                {
-                    username = username,
-                    password = password
-                };
-
-                context.accounts.Add(acc);
-                context.SaveChanges();
-            }*/
-
             var query = fRoot.getContext().accounts.SingleOrDefault(s => s.username == username);
 
             if(query != null)
